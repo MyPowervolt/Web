@@ -12,9 +12,10 @@ export const cardsData = [
         "Realizzazione di impianti di sicurezza e videosorveglianza",
         "Realizzazione impianti Dati",
         "Installazioni wall-box",
-        "domotica e smart-home",
+        "Domotica e smart-home",
         "Sistemi di illuminazione LED",
-        "Conformità alle norme CEI 64-8"
+        "Conformità alle norme CEI 64-8",
+        ""
       ]
   },
   {
@@ -33,8 +34,9 @@ export const cardsData = [
       "Realizzazione uscite di sicurezza",
       "Relamping e Revamping ",
       "Rete dati ",
-      "sistema di controllo accessi",
+      "Sistema di controllo accessi",
       "Ricerca guasti",
+      ""
     ]
   },
   {
@@ -42,7 +44,7 @@ export const cardsData = [
     title: "Automazione Civile",
     description:
       "Installazione e manutenzione delle automazioni civili ",
-    features: ["Cancelli", "Basculanti", "Serrande", "Tapparelle"]
+    features: ["Cancelli", "Basculanti", "Serrande", "Tapparelle",""]
   },
   {
     id: 4,
@@ -54,7 +56,8 @@ export const cardsData = [
       "Installazione e configurazione di inverter, soft starter e sistemi di avviamento motori",
       "Collegamento sensori e dispositivi di campo",
       "Impianto di sicurezza macchina",
-      "Cablaggio canalizzazioni macchina"
+      "Cablaggio canalizzazioni macchina",
+      ""
     ]
   },
   // {
