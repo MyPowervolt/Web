@@ -14,10 +14,10 @@ function Footer() {
             <p>
               📞{" "}
               <a
-                href="tel:+393661638857"
+                href="tel:+393932826533"
                 className="hover:text-yellow-400 transition-colors"
               >
-                +39 366 163 8857
+                +39 3932826533
               </a>
             </p>
             <p>

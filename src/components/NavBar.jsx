@@ -53,20 +53,14 @@ export default function Navbar() {
       </ul> */}
 
         {/* Logo + testo (desktop + mobile) */}
-        <div className="flex flex-col justify-center items-center mb-8 relative">
-          <div className="relative w-full flex justify-center items-center">
+          <div className="w-full flex justify-center items-center">
             <img
              fetchpriority={"high"}
               src="/img/LogoPageS.svg"
               alt="Logo PowerVolt"
-              className="h-20 mt-6 md:h-64 px-6 md:px-12"
+              className="h-60 my-4 px-10"
             />
-            {/* Scritta in basso a destra del logo */}
-            <p className="mt-3.5 absolute bottom-0  md:right-8 text-lg md:text-3xl font-['Times_New_Roman'] text-white drop-shadow-[0_0_3px_black]">
-              Impianti elettrici
-            </p>
           </div>
-        </div>
 
         {/* Overlay scuro dietro menu mobile */}
         {open && (
