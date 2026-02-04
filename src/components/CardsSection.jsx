@@ -33,7 +33,7 @@ export default function Accordion({ title, description, features, isOpen, onTogg
       >
         <div className={`${isOpen ? "py-4" : "py-0"} transition-all duration-500`}>
           <p className="text-gray-200 mb-4">{description}</p>
-          <ul className="list-disc list-inside text-start text-gray-300 text-sm space-y-1">
+          <ul className="list-disc list-outside pl-5 text-gray-300 text-sm space-y-2">
             {features.map((f, i) => (
               <li key={i}>{f}</li>
             ))}

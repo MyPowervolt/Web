@@ -2,13 +2,13 @@ function Footer() {
   return (
     <footer className="bg-black/10 text-gray-100 py-10 px-6 md:px-20 border-t-2 border-yellow-400 mt-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="space-y-2">
-          <h2 className="text-2xl font-bold text-yellow-400">Powervolt</h2>
+        <div className="space-y-2 text-center">
+          <h2 className="text-2xl font-bold text-yellow-400">Powervolt Di Castaldo Salvatore</h2>
           <p className="text-gray-300">
             Impianti elettrici civili e industriali
           </p>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2 text-center">
           <h3 className="text-lg font-semibold text-yellow-400">Contatti</h3>
           <address className="not-italic space-y-1 text-gray-300">
             <p>
@@ -32,11 +32,12 @@ function Footer() {
             <p>📍 Zola Predosa (BO)</p>
           </address>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2 text-center">
           <h3 className="text-lg font-semibold text-yellow-400">
             Dati aziendali
           </h3>
           <p className="text-gray-300">P. IVA 04351091204</p>
+          <p className="text-gray-300">Uscr. CCIAA di Bologna n: REA BO - 586974</p>
           <p className="text-gray-300">
             PEC:{" "}
             <a

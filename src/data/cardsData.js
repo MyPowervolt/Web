@@ -8,7 +8,7 @@ export const cardsData = [
         "Progettazione impianti su misura",
         "Assistenza ristrutturazioni",
         "Adeguamento per impianti datati",
-        "Installazione e manutenzione impianti citofonici",
+        "Installazione e manutenzione impianti citofonici e videocitofonici",
         "Realizzazione di impianti di sicurezza e videosorveglianza",
         "Realizzazione impianti Dati",
         "Installazioni wall-box",
