@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:powervolt.it)",
+      "WebFetch(domain:www.powervolt.it)",
+      "WebSearch",
+      "WebFetch(domain:webcache.googleusercontent.com)",
+      "Bash(npm install *)",
+      "Bash(npm audit *)",
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(npx next *)",
+      "PowerShell(Start-Process \"http://localhost:3000/contatti\")",
+      "PowerShell(Start-Sleep -Seconds 4; Start-Process \"http://localhost:3000/\")",
+      "PowerShell(Start-Process \"http://localhost:3000/\"; Start-Sleep -Seconds 2; Start-Process \"http://localhost:3000/contatti\"; Start-Sleep -Seconds 1; Start-Process \"http://localhost:3000/chi-siamo\")",
+      "Bash(curl *)",
+      "Bash(vercel --prod)",
+      "Bash(vercel inspect *)",
+      "Bash(dir C:\\\\Users\\\\bot\\\\Desktop\\\\PowerVolt\\\\public\\\\img *)",
+      "Bash(npm list *)",
+      "WebFetch(domain:powervolt-indol.vercel.app)",
+      "Bash(npx vercel *)"
+    ]
+  }
+}

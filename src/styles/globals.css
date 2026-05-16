@@ -1,0 +1,314 @@
+@import "tailwindcss";
+
+/* ─── Tailwind v4 Theme ───────────────────────────────────────────────────────
+   In Tailwind v4, design tokens are declared in @theme so the framework
+   generates utility classes (text-brand-primary, bg-brand-secondary, etc.)
+   directly from these values.
+
+   Brand palette extracted from public/LogoPageS.svg:
+     - #e2aa0e / #e1ac0e  → amber gold (sinusoide wave + lightning bolt icon)
+     - #f0b400            → amber gold (.title class in SVG)
+     - #ffffff            → white (wordmark POWERVOLT)
+     - #f2f2f2 / #e9e9e9  → off-white (subtitle text in logo)
+   ────────────────────────────────────────────────────────────────────────── */
+
+@theme {
+  /* Brand palette */
+  --color-brand-primary: #e2aa0e;
+  --color-brand-primary-hover: #c99a0c;
+  --color-brand-primary-light: #fef3c7;
+  --color-brand-secondary: #1a1a2e;
+  --color-brand-secondary-light: #2d2d4e;
+  --color-brand-accent: #f0b400;
+  --color-brand-white: #ffffff;
+  --color-brand-off-white: #f2f2f2;
+
+  /* Neutral scale */
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
+  --color-neutral-950: #030712;
+
+  /* Success / error */
+  --color-success-50: #f0fdf4;
+  --color-success-500: #22c55e;
+  --color-success-700: #15803d;
+  --color-error-50: #fef2f2;
+  --color-error-500: #ef4444;
+  --color-error-700: #b91c1c;
+
+  /* Font families (match SVG logo CSS) */
+  --font-family-sans: "Inter", "Montserrat", Arial, sans-serif;
+  --font-family-heading: "Inter", "Montserrat", Arial, sans-serif;
+
+  /* Font variable from next/font */
+  --font-inter: var(--font-inter, "Inter");
+
+  /* Custom spacing tokens */
+  --spacing-section: 5rem;
+  --spacing-section-sm: 3rem;
+
+  /* Box shadows */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.12), 0 16px 32px rgba(0, 0, 0, 0.08);
+  --shadow-brand-glow: 0 0 24px rgba(226, 170, 14, 0.25);
+
+  /* Border radius extensions */
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-slide-in: slide-in 0.25s ease-out;
+}
+
+/* Animation keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ─── CSS Custom Properties (runtime theming layer) ─────────────────────────
+   These mirror the @theme values for use in plain CSS rules and
+   JavaScript-driven inline styles. Keep in sync with @theme above.
+   ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Brand palette */
+  --color-brand-primary: #e2aa0e;
+  --color-brand-primary-hover: #c99a0c;
+  --color-brand-primary-light: #fef3c7;
+  --color-brand-secondary: #1a1a2e;
+  --color-brand-secondary-light: #2d2d4e;
+  --color-brand-accent: #f0b400;
+
+  /* Text hierarchy */
+  --color-text-primary: #111827;
+  --color-text-secondary: #374151;
+  --color-text-muted: #6b7280;
+  --color-text-inverse: #ffffff;
+
+  /* Surface colors */
+  --color-surface-base: #ffffff;
+  --color-surface-muted: #f3f4f6;
+  --color-surface-brand: #fef9e7;
+  --color-surface-dark: #1a1a2e;
+
+  /* Border */
+  --color-border: #e5e7eb;
+  --color-border-strong: #d1d5db;
+
+  /* Typography scale (desktop) */
+  --font-size-h1: clamp(2rem, 4vw, 3.75rem);
+  --font-size-h2: clamp(1.5rem, 3vw, 2.25rem);
+  --font-size-h3: clamp(1.25rem, 2.5vw, 1.5rem);
+  --font-size-body: 1rem;
+  --font-size-sm: 0.875rem;
+
+  /* Spacing */
+  --spacing-section: 5rem;
+  --spacing-section-mobile: 3rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+
+  /* Border radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+/* ─── Base reset & defaults ──────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Smooth scrolling for anchor links */
+  scroll-behavior: smooth;
+  /* Prevent font size adjustment on iOS */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-inter, "Inter", "Montserrat", Arial, sans-serif);
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-base);
+  line-height: 1.6;
+  /* Prevent horizontal scroll */
+  overflow-x: hidden;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography ─────────────────────────────────────────────────────────── */
+
+/*
+  These heading and anchor rules must live inside @layer base so that
+  Tailwind utility classes (in @layer utilities) can override them.
+  Unlayered CSS always beats layered CSS in the cascade — wrapping here
+  restores the expected utility-first behavior.
+*/
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-inter, "Inter", "Montserrat", Arial, sans-serif);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+/* ─── Focus visible — accessibility ─────────────────────────────────────── */
+
+:focus-visible {
+  outline: 3px solid var(--color-brand-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Remove focus ring for mouse users, keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ─── Skip navigation — accessibility ───────────────────────────────────── */
+
+.skip-nav {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.skip-nav:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-brand-secondary);
+  color: var(--color-brand-primary);
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ─── Selection ──────────────────────────────────────────────────────────── */
+
+::selection {
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-secondary);
+}
+
+/* ─── Images ─────────────────────────────────────────────────────────────── */
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ─── Links ──────────────────────────────────────────────────────────────── */
+
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* ─── Scrollbar styling (optional, desktop only) ────────────────────────── */
+
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-surface-muted);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-brand-primary);
+    border-radius: 4px;
+  }
+}
+
+/* ─── Section alternation pattern ───────────────────────────────────────── */
+
+.section-light {
+  background-color: var(--color-surface-base);
+}
+
+.section-muted {
+  background-color: var(--color-surface-muted);
+}
+
+.section-dark {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-inverse);
+}
+
+.section-brand {
+  background-color: var(--color-surface-brand);
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
