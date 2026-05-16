@@ -2,8 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Lightbox from "yet-another-react-lightbox";
+import dynamic from "next/dynamic";
 import "yet-another-react-lightbox/styles.css";
+
+// Defer lightbox JS from the critical bundle — only needed after user interaction
+const Lightbox = dynamic(() => import("yet-another-react-lightbox"), {
+  ssr: false,
+});
 
 interface GalleryImage {
   src: string;

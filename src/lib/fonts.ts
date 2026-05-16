@@ -15,8 +15,6 @@ export const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
-  // Preload the most common weights used in the design
-  weight: ["400", "500", "600", "700", "800"],
-  // Optimised for Italian — latin subset covers all accented characters
+  // Inter is a variable font — no weight needed, one WOFF2 covers all weights
   preload: true,
 });
