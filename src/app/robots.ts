@@ -16,21 +16,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: [
-          "/api/",
-          "/_next/",
-          "/admin/",
-          // Legal pages are indexed but we keep search parameters out
-          "/*?*",
-        ],
-      },
-      // Allow Googlebot specifically to access everything public
-      {
-        userAgent: "Googlebot",
-        allow: "/",
+        disallow: ["/api/", "/_next/", "/admin/"],
       },
     ],
     sitemap: `${SEO_CONFIG.siteUrl}/sitemap.xml`,
-    host: SEO_CONFIG.siteUrl,
   };
 }
