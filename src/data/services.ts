@@ -68,9 +68,9 @@ export const SERVICES: Service[] = [
     slug: "domotica",
     name: "Domotica",
     shortDescription:
-      "Sistemi di automazione domestica per il controllo intelligente di luci, climatizzazione, sicurezza e risparmio energetico.",
+      "Sistemi di automazione domestica per il controllo intelligente di luci, climatizzazione e risparmio energetico.",
     fullDescription:
-      "PowerVolt installa sistemi domotici avanzati che trasformano la tua abitazione o il tuo ufficio in un ambiente intelligente. Grazie alla domotica puoi controllare luci, tende, climatizzazione, irrigazione e sistema di sicurezza da smartphone, tablet o pannello murale. PowerVolt progetta soluzioni su misura sia per nuove costruzioni che per ristrutturazioni, con compatibilita con i principali standard e protocolli del settore.",
+      "PowerVolt installa sistemi domotici avanzati che trasformano la tua abitazione o il tuo ufficio in un ambiente intelligente. Grazie alla domotica puoi controllare luci, tende, climatizzazione e tapparelle da smartphone, tablet o pannello murale. PowerVolt progetta soluzioni su misura sia per nuove costruzioni che per ristrutturazioni, con compatibilità con i principali standard e protocolli del settore.",
     icon: "Smartphone",
     keywords: [
       "domotica",
@@ -85,7 +85,7 @@ export const SERVICES: Service[] = [
       {
         question: "Cosa posso controllare con un sistema domotico?",
         answer:
-          "Con un sistema domotico PowerVolt puoi controllare illuminazione e scenari luce, tapparelle, tende, veneziane, climatizzazione, riscaldamento e irrigazione del giardino — tutto da smartphone, tablet o pannello murale.",
+          "Con un sistema domotico PowerVolt puoi controllare illuminazione e scenari luce, tapparelle, tende, veneziane, climatizzazione e riscaldamento — tutto da smartphone, tablet o pannello murale.",
       },
       {
         question: "Potete installare un sistema domotico in una casa già costruita?",
@@ -96,11 +96,6 @@ export const SERVICES: Service[] = [
         question: "È possibile creare scenari automatici per luci e tapparelle?",
         answer:
           "Sì. Un sistema domotico permette di impostare scenari personalizzati: luci che si regolano in base all'orario, tapparelle che si chiudono al tramonto, ambienti preconfigurati con un solo tocco dal pannello o dallo smartphone.",
-      },
-      {
-        question: "Gestite anche l'irrigazione automatica del giardino?",
-        answer:
-          "Sì. PowerVolt integra il controllo dell'irrigazione del giardino nel sistema domotico, permettendo di programmare e gestire gli impianti da remoto insieme agli altri sistemi dell'abitazione.",
       },
       {
         question: "Dopo l'installazione viene fornita formazione sull'uso del sistema?",

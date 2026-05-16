@@ -151,7 +151,7 @@ export function Footer() {
           {/* Column 4: Badge CEI conformity */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-primary">
-              Conformita
+              Conformità
             </h3>
             <div className="inline-flex items-center gap-2 rounded-xl border border-brand-primary/30 bg-brand-primary/10 px-4 py-3">
               <span aria-hidden="true" className="text-2xl">

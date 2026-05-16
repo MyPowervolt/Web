@@ -10,7 +10,7 @@ interface StatItem {
   value: string;
   /**
    * Short label below the value.
-   * e.g. "Servizi Offerti", "Conformita Normativa"
+   * e.g. "Servizi Offerti", "Conformità Normativa"
    */
   label: string;
   /**

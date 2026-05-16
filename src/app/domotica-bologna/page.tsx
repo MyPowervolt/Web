@@ -17,7 +17,7 @@ const PAGE_URL = `${SEO_CONFIG.siteUrl}/domotica-bologna`;
 export const metadata: Metadata = buildMetadata({
   title: "Domotica Bologna | Automazione Casa e Industria",
   description:
-    "Sistemi domotici a Bologna per il controllo intelligente di luci, climatizzazione, tapparelle e sicurezza. PowerVolt installa domotica residenziale e industriale con certificazione CEI.",
+    "Sistemi domotici a Bologna per il controllo intelligente di luci, climatizzazione e tapparelle. PowerVolt installa domotica residenziale e industriale con certificazione CEI.",
   canonical: PAGE_URL,
   keywords: [
     "domotica Bologna",
@@ -35,7 +35,7 @@ const FAQ = [
   {
     question: "Installi sistemi domotici a Bologna?",
     answer:
-      "Sì. Progetto e installo sistemi domotici a Bologna e nell'area metropolitana bolognese per abitazioni, ville, uffici e ambienti industriali. Mi occupo di luci, climatizzazione, tapparelle, irrigazione e sicurezza.",
+      "Sì. Progetto e installo sistemi domotici a Bologna e nell'area metropolitana bolognese per abitazioni, ville, uffici e ambienti industriali. Mi occupo di luci, climatizzazione e tapparelle.",
   },
   {
     question: "La domotica si può installare anche in una casa già costruita?",
@@ -63,9 +63,6 @@ const APPLICATIONS = [
   "Controllo intelligente di luci e scenari luminosi",
   "Gestione tapparelle e tende motorizzate",
   "Regolazione termica e climatizzazione",
-  "Irrigazione automatica del giardino",
-  "Videosorveglianza e controllo accessi",
-  "Rilevazione intrusioni e allarmi",
   "Integrazione con assistenti vocali",
   "Monitoraggio consumi energetici",
 ];
@@ -78,7 +75,7 @@ export default function DomoticaBolognaPage() {
   const serviceSchema = buildLocalServiceSchema({
     name: "Domotica a Bologna — Sistemi di Automazione Residenziale e Industriale",
     description:
-      "Progettazione e installazione di sistemi domotici a Bologna per il controllo intelligente di luci, climatizzazione, tapparelle, sicurezza e consumi energetici. Conformi alle normative CEI.",
+      "Progettazione e installazione di sistemi domotici a Bologna per il controllo intelligente di luci, climatizzazione, tapparelle e consumi energetici. Conformi alle normative CEI.",
     url: PAGE_URL,
     city: "Bologna",
   });
@@ -98,7 +95,7 @@ export default function DomoticaBolognaPage() {
           </>
         }
         headingLevel="h1"
-        subheadline="Sistemi domotici progettati su misura per il controllo intelligente della tua abitazione o azienda. Luci, climatizzazione, tapparelle, sicurezza — tutto sotto controllo."
+        subheadline="Sistemi domotici progettati su misura per il controllo intelligente della tua abitazione o azienda. Luci, climatizzazione, tapparelle — tutto sotto controllo."
       />
 
       <Section variant="light" padding="sm">
@@ -122,7 +119,7 @@ export default function DomoticaBolognaPage() {
             <p>
               La <strong>domotica</strong> permette di controllare e automatizzare le funzioni
               principali di un&apos;abitazione o di un ambiente industriale: luci, tapparelle,
-              climatizzazione, irrigazione, sicurezza. PowerVolt progetta e installa sistemi
+              climatizzazione. PowerVolt progetta e installa sistemi
               domotici a <strong>Bologna</strong> e nell&apos;area metropolitana bolognese, sia in
               edifici di nuova costruzione che in ristrutturazioni.
             </p>

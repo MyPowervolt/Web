@@ -65,7 +65,7 @@ const HOMEPAGE_FAQ = [
   {
     question: "Installate anche sistemi domotici?",
     answer:
-      "Sì. PowerVolt progetta e installa sistemi domotici per il controllo intelligente di luci, climatizzazione, tapparelle, irrigazione e sicurezza, sia in nuove costruzioni che in ristrutturazioni.",
+      "Sì. PowerVolt progetta e installa sistemi domotici per il controllo intelligente di luci, climatizzazione e tapparelle, sia in nuove costruzioni che in ristrutturazioni.",
   },
 ];
 

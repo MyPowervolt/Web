@@ -17,7 +17,7 @@ const SERVICE_SLUG = "domotica";
 export const metadata: Metadata = buildMetadata({
   title: "Domotica e Smart Home a Bologna",
   description:
-    "Installazione sistemi domotici a Bologna e provincia per il controllo intelligente di luci, climatizzazione, sicurezza e risparmio energetico. PowerVolt installa la smart home su misura.",
+    "Installazione sistemi domotici a Bologna e provincia per il controllo intelligente di luci, climatizzazione e risparmio energetico. PowerVolt installa la smart home su misura.",
   canonical: `${SEO_CONFIG.siteUrl}/servizi/domotica`,
   keywords: [
     "domotica",
@@ -46,7 +46,6 @@ export default function DomoticaPage() {
     "Controllo illuminazione e scenari luce",
     "Gestione climatizzazione e riscaldamento",
     "Automazione tapparelle, tende e veneziane",
-    "Controllo irrigazione giardino",
     "Controllo da smartphone, tablet e pannello",
     "Formazione all'uso del sistema installato",
   ];
@@ -60,7 +59,7 @@ export default function DomoticaPage() {
         ctaPrimaryText="Richiedi Preventivo"
         headline="Domotica — Trasforma la Tua Casa in un Ambiente Intelligente"
         headingLevel="h1"
-        subheadline="PowerVolt progetta e installa sistemi domotici per il controllo intelligente di luci, climatizzazione, tapparelle e sicurezza. Soluzioni su misura per nuove costruzioni e ristrutturazioni."
+        subheadline="PowerVolt progetta e installa sistemi domotici per il controllo intelligente di luci, climatizzazione e tapparelle. Soluzioni su misura per nuove costruzioni e ristrutturazioni."
       />
 
       <Section variant="light" padding="sm">

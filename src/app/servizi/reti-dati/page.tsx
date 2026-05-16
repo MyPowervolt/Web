@@ -24,7 +24,6 @@ export const metadata: Metadata = buildMetadata({
     "cablaggio strutturato",
     "Cat.6",
     "rete Wi-Fi aziendale",
-    "fibra ottica",
     "infrastruttura di rete",
   ],
 });
