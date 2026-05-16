@@ -53,14 +53,6 @@ export const metadata: Metadata = {
     google: "OiX7OOUFalehZ0HV8qP13ZT_TRj9dqC25smPkxwcWBY",
   },
   robots: SEO_CONFIG.defaultRobots,
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-touch-icon.png",
-  },
-  manifest: "/site.webmanifest",
 };
 
 // ─── Root Layout ──────────────────────────────────────────────────────────────
