@@ -26,7 +26,7 @@ export const metadata: Metadata = buildMetadata({
     "messa a norma impianto elettrico",
     "rifacimento impianto elettrico",
     "DM 37/08",
-    "dichiarazione conformita impianto",
+    "dichiarazione conformità impianto",
   ],
 });
 

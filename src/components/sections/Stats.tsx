@@ -38,7 +38,7 @@ const STATS: StatItem[] = [
   {
     value: "CEI",
     label: "Normative Rispettate",
-    description: "Dichiarazione di conformita su ogni impianto",
+    description: "Dichiarazione di conformità su ogni impianto",
   },
   {
     // ⚠️ PLACEHOLDER — confirm years of operation with client before going live

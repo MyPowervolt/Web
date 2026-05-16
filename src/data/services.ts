@@ -17,14 +17,14 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Progettazione e realizzazione di impianti elettrici per abitazioni, condomini e uffici. Conformi alle normative CEI e DM 37/08.",
     fullDescription:
-      "PowerVolt progetta e realizza impianti elettrici civili per abitazioni private, condomini, uffici e locali commerciali. Ogni impianto viene realizzato nel pieno rispetto delle normative CEI vigenti e del DM 37/08. Al termine dei lavori viene rilasciata la dichiarazione di conformita (DiCo), documento obbligatorio che certifica la regolarita dell'impianto. PowerVolt si occupa di messa a norma, rifacimento completo, ampliamento e manutenzione programmata.",
+      "PowerVolt progetta e realizza impianti elettrici civili per abitazioni private, condomini, uffici e locali commerciali. Ogni impianto viene realizzato nel pieno rispetto delle normative CEI vigenti e del DM 37/08. Al termine dei lavori viene rilasciata la dichiarazione di conformità (DiCo), documento obbligatorio che certifica la regolarità dell'impianto. PowerVolt si occupa di messa a norma, rifacimento completo, ampliamento e manutenzione programmata.",
     icon: "Home",
     keywords: [
       "impianti elettrici civili",
       "impianto elettrico casa",
       "messa a norma impianto elettrico",
       "rifacimento impianto elettrico",
-      "dichiarazione di conformita impianto elettrico",
+      "dichiarazione di conformità impianto elettrico",
       "DM 37/08",
       "elettricista",
     ],
@@ -118,7 +118,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Impianti elettrici per capannoni, industrie e ambienti produttivi. Progettazione, installazione e manutenzione secondo normative CEI.",
     fullDescription:
-      "PowerVolt realizza impianti elettrici industriali per capannoni, stabilimenti produttivi, magazzini e ambienti a rischio specifico. L'esperienza di PowerVolt nel settore industriale comprende progettazione e realizzazione in bassa tensione, cablaggio potenza e controllo, sistemi di illuminazione industriale e impianti di terra industriali. Ogni intervento e accompagnato da documentazione tecnica completa e dichiarazione di conformita.",
+      "PowerVolt realizza impianti elettrici industriali per capannoni, stabilimenti produttivi, magazzini e ambienti a rischio specifico. L'esperienza di PowerVolt nel settore industriale comprende progettazione e realizzazione in bassa tensione, cablaggio potenza e controllo, sistemi di illuminazione industriale e impianti di terra industriali. Ogni intervento è accompagnato da documentazione tecnica completa e dichiarazione di conformità.",
     icon: "Factory",
     keywords: [
       "impianti elettrici industriali",
@@ -264,16 +264,15 @@ export const SERVICES: Service[] = [
     slug: "reti-dati",
     name: "Reti Dati",
     shortDescription:
-      "Cablaggio strutturato, reti LAN/Wi-Fi, fibra ottica e infrastrutture dati per uffici, aziende e ambienti industriali.",
+      "Cablaggio strutturato Cat.6/Cat.6A, reti LAN e Wi-Fi, installazione rack e patch panel per uffici, aziende e ambienti industriali.",
     fullDescription:
-      "PowerVolt progetta e realizza infrastrutture di rete dati per uffici, aziende e ambienti industriali a Bologna e provincia. I servizi comprendono: cablaggio strutturato Cat.6/Cat.6A/Cat.7, installazione rack e patch panel, reti Wi-Fi enterprise e stesura fibra ottica (monomodale e multimodale).",
+      "PowerVolt progetta e realizza infrastrutture di rete dati per uffici, aziende e ambienti industriali a Bologna e provincia. I servizi comprendono: cablaggio strutturato Cat.6/Cat.6A, installazione rack e patch panel e reti Wi-Fi per copertura aziendale.",
     icon: "Network",
     keywords: [
       "reti dati",
       "cablaggio strutturato",
       "rete LAN",
       "rete Wi-Fi",
-      "fibra ottica",
       "Cat.6",
       "Cat.6A",
       "infrastruttura di rete",
@@ -283,7 +282,7 @@ export const SERVICES: Service[] = [
       {
         question: "Che tipo di cablaggio strutturato realizzate?",
         answer:
-          "PowerVolt realizza impianti di cablaggio strutturato con cavi Cat.6, Cat.6A e Cat.7 per reti LAN ad alta velocità. Il cablaggio viene dimensionato in base al numero di postazioni, alla tipologia di utilizzo e alle esigenze dell'impianto.",
+          "PowerVolt realizza impianti di cablaggio strutturato con cavi Cat.6 e Cat.6A per reti LAN ad alta velocità. Il cablaggio viene dimensionato in base al numero di postazioni, alla tipologia di utilizzo e alle esigenze dell'impianto.",
       },
       {
         question: "Per quali ambienti realizzate reti dati?",
@@ -298,12 +297,7 @@ export const SERVICES: Service[] = [
       {
         question: "Installate reti Wi-Fi per uffici e aziende?",
         answer:
-          "Sì. Progettiamo e installiamo reti Wi-Fi enterprise con access point professionali per garantire copertura uniforme in tutti gli ambienti, anche su più piani o zone separate. La rete Wi-Fi può essere integrata con la rete LAN cablata.",
-      },
-      {
-        question: "Realizzate stesura di fibra ottica?",
-        answer:
-          "Sì. PowerVolt stende cavi in fibra ottica monomodale e multimodale per connessioni ad alta velocità all'interno degli edifici o tra edifici dello stesso complesso, come sedi aziendali, capannoni o piani diversi di un ufficio.",
+          "Sì. Progettiamo e installiamo reti Wi-Fi con access point professionali per garantire copertura uniforme in tutti gli ambienti, anche su più piani o zone separate. La rete Wi-Fi può essere integrata con la rete LAN cablata.",
       },
       {
         question: "È necessario un sopralluogo prima di realizzare una rete dati?",

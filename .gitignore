@@ -8,6 +8,9 @@ out/
 # Vercel
 .vercel
 
+# Claude Code local settings
+.claude
+
 # environment variables
 .env
 .env.local

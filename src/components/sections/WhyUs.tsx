@@ -23,7 +23,7 @@ const WHY_US_ITEMS: WhyUsItem[] = [
   },
   {
     icon: Clock,
-    title: "Puntualita e Rispetto dei Tempi",
+    title: "Puntualità e Rispetto dei Tempi",
     description:
       "Definiamo con il cliente i tempi di intervento e li rispettiamo. La gestione precisa dei cantieri ci permette di consegnare i lavori nei tempi stabiliti.",
   },
@@ -60,7 +60,7 @@ export function WhyUs({ variant = "full", heading = "Perché Scegliere PowerVolt
           </h2>
           <p className="mt-4 text-lg text-neutral-300">
             Scegliere PowerVolt significa affidarsi a un professionista del settore che mette
-            competenza, qualita e rispetto delle normative al primo posto.
+            competenza, qualità e rispetto delle normative al primo posto.
           </p>
         </div>
 

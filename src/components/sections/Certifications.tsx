@@ -37,7 +37,7 @@ const CERTIFICATIONS: CertificationItem[] = [
   },
   {
     name: "D.M. 37/08",
-    description: "Dichiarazione di conformita (DiCo) rilasciata al termine di ogni intervento.",
+    description: "Dichiarazione di conformità (DiCo) rilasciata al termine di ogni intervento.",
     confirmed: true,
   },
   {
@@ -85,7 +85,7 @@ export function Certifications({ variant = "confirmed" }: CertificationsProps) {
             className="text-3xl font-extrabold tracking-tight text-neutral-900 md:text-4xl"
             id="certifications-heading"
           >
-            Conformita e Certificazioni
+            Conformità e Certificazioni
           </h2>
           <p className="mt-4 text-lg text-neutral-600">
             Ogni impianto PowerVolt viene realizzato nel pieno rispetto delle normative vigenti,

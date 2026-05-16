@@ -17,7 +17,7 @@ const SERVICE_SLUG = "reti-dati";
 export const metadata: Metadata = buildMetadata({
   title: "Reti Dati e Cablaggio Strutturato",
   description:
-    "Cablaggio strutturato e reti dati a Bologna per uffici, aziende e ambienti industriali. Cat.6/Cat.6A/Cat.7, Wi-Fi enterprise e fibra ottica. Sopralluogo gratuito.",
+    "Cablaggio strutturato Cat.6/Cat.6A e reti dati a Bologna per uffici, aziende e ambienti industriali. Reti LAN, Wi-Fi e installazione rack. Sopralluogo gratuito.",
   canonical: `${SEO_CONFIG.siteUrl}/servizi/reti-dati`,
   keywords: [
     "reti dati",
@@ -41,11 +41,10 @@ export default function RetiDatiPage() {
   const faqSchema = buildFaqSchema(service.faq);
 
   const scopeItems = [
-    "Cablaggio strutturato Cat.6, Cat.6A, Cat.7",
+    "Cablaggio strutturato Cat.6 e Cat.6A",
     "Installazione rack e patch panel",
     "Reti LAN cablate ad alta velocità",
-    "Reti Wi-Fi enterprise multi-zona",
-    "Stesura fibra ottica monomodale e multimodale",
+    "Reti Wi-Fi per uffici e aziende",
   ];
 
   return (
@@ -57,7 +56,7 @@ export default function RetiDatiPage() {
         ctaPrimaryText="Richiedi Preventivo"
         headline="Reti Dati e Cablaggio Strutturato — Alta Performance"
         headingLevel="h1"
-        subheadline="PowerVolt progetta e realizza infrastrutture di rete dati per uffici, aziende e ambienti industriali. Cablaggio strutturato Cat.6/Cat.6A/Cat.7, fibra ottica e reti Wi-Fi enterprise."
+        subheadline="PowerVolt progetta e realizza infrastrutture di rete dati per uffici, aziende e ambienti industriali. Cablaggio strutturato Cat.6/Cat.6A, reti LAN, Wi-Fi e installazione rack."
       />
 
       <Section variant="light" padding="sm">
