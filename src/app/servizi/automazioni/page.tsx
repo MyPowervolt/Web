@@ -70,13 +70,21 @@ export default function AutomazioniPage() {
 
       <Section variant="light" padding="sm">
         <Container>
-          <Breadcrumb items={[{ name: "Servizi", href: "/servizi" }, { name: service.name, href: service.path }]} />
+          <Breadcrumb
+            items={[
+              { name: "Servizi", href: "/servizi" },
+              { name: service.name, href: service.path },
+            ]}
+          />
         </Container>
       </Section>
 
       <Section aria-labelledby="service-desc-heading" variant="light">
         <Container size="narrow">
-          <h2 className="mb-6 text-2xl font-extrabold text-neutral-900 md:text-3xl" id="service-desc-heading">
+          <h2
+            className="mb-6 text-2xl font-extrabold text-neutral-900 md:text-3xl"
+            id="service-desc-heading"
+          >
             Automazione Professionale per Ogni Esigenza
           </h2>
           <p className="text-lg leading-relaxed text-neutral-600">{service.fullDescription}</p>
@@ -86,7 +94,10 @@ export default function AutomazioniPage() {
       <Section aria-labelledby="scope-heading" variant="muted">
         <Container>
           <div className="mb-10 text-center">
-            <h2 className="mb-3 text-2xl font-extrabold text-neutral-900 md:text-3xl" id="scope-heading">
+            <h2
+              className="mb-3 text-2xl font-extrabold text-neutral-900 md:text-3xl"
+              id="scope-heading"
+            >
               Cosa Include il Servizio
             </h2>
             <p className="mx-auto max-w-xl text-neutral-600">
@@ -99,7 +110,10 @@ export default function AutomazioniPage() {
               <ul className="space-y-3" role="list">
                 {civilItems.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-brand-primary" />
+                    <CheckCircle
+                      aria-hidden
+                      className="text-brand-primary mt-0.5 h-5 w-5 shrink-0"
+                    />
                     <span className="text-neutral-700">{item}</span>
                   </li>
                 ))}
@@ -110,38 +124,38 @@ export default function AutomazioniPage() {
               <ul className="space-y-3" role="list">
                 {industrialItems.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-brand-primary" />
+                    <CheckCircle
+                      aria-hidden
+                      className="text-brand-primary mt-0.5 h-5 w-5 shrink-0"
+                    />
                     <span className="text-neutral-700">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-
-          {/* Basculante — foto reale installazione */}
-          <div className="relative mt-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-sm">
-            <Image
-              alt="Automazione basculante garage a Bologna"
-              className="object-cover object-center"
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1216px"
-              src="/img/bascul.webp"
-            />
-          </div>
         </Container>
       </Section>
 
       <Section aria-labelledby="faq-service-heading" variant="light">
         <Container size="narrow">
-          <h2 className="mb-8 text-2xl font-extrabold text-neutral-900 md:text-3xl" id="faq-service-heading">
+          <h2
+            className="mb-8 text-2xl font-extrabold text-neutral-900 md:text-3xl"
+            id="faq-service-heading"
+          >
             Domande Frequenti
           </h2>
           <div className="space-y-4">
             {service.faq.map((item, index) => (
               <details key={index} className="group rounded-xl border border-neutral-200 bg-white">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-xl px-6 py-4 font-semibold text-neutral-900 hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2">
+                <summary className="hover:text-brand-primary focus-visible:ring-brand-primary flex cursor-pointer list-none items-center justify-between gap-4 rounded-xl px-6 py-4 font-semibold text-neutral-900 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none">
                   {item.question}
-                  <span aria-hidden="true" className="ml-auto shrink-0 text-brand-primary transition-transform group-open:rotate-180">&#8964;</span>
+                  <span
+                    aria-hidden="true"
+                    className="text-brand-primary ml-auto shrink-0 transition-transform group-open:rotate-180"
+                  >
+                    &#8964;
+                  </span>
                 </summary>
                 <div className="border-t border-neutral-100 px-6 py-4 text-neutral-600">
                   <p>{item.answer}</p>
@@ -152,7 +166,12 @@ export default function AutomazioniPage() {
         </Container>
       </Section>
 
-      <Services excludeSlug={SERVICE_SLUG} heading="Altri Servizi PowerVolt" subheading="Scopri tutti i servizi di impiantistica elettrica disponibili." variant="related" />
+      <Services
+        excludeSlug={SERVICE_SLUG}
+        heading="Altri Servizi PowerVolt"
+        subheading="Scopri tutti i servizi di impiantistica elettrica disponibili."
+        variant="related"
+      />
       <Contact serviceName={service.name} variant="compact" />
     </>
   );
