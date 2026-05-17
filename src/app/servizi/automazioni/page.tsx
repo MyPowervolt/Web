@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { buildMetadata } from "@/lib/metadata";
 import { SEO_CONFIG } from "@/lib/seo-config";
