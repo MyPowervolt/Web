@@ -180,23 +180,15 @@ export default function ContattiPage() {
               </div>
 
               {/* Location */}
-              {SITE_CONFIG.address.addressLocality && (
-                <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-card">
-                  <div className="mb-3 flex items-center gap-3">
-                    <MapPin aria-hidden className="h-5 w-5 text-brand-primary" />
-                    <h3 className="text-lg font-bold text-neutral-900">Zona Operativa</h3>
-                  </div>
-                  <address className="not-italic text-neutral-600">
-                    {SITE_CONFIG.address.streetAddress && (
-                      <>{SITE_CONFIG.address.streetAddress}<br /></>
-                    )}
-                    {SITE_CONFIG.address.postalCode && `${SITE_CONFIG.address.postalCode} `}
-                    {SITE_CONFIG.address.addressLocality}
-                    {SITE_CONFIG.address.addressRegion &&
-                      ` (${SITE_CONFIG.address.addressRegion})`}
-                  </address>
+              <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-card">
+                <div className="mb-3 flex items-center gap-3">
+                  <MapPin aria-hidden className="h-5 w-5 text-brand-primary" />
+                  <h3 className="text-lg font-bold text-neutral-900">Zona Operativa</h3>
                 </div>
-              )}
+                <p className="text-neutral-600">
+                  Servizi elettrici civili e industriali attivi su Bologna e provincia.
+                </p>
+              </div>
 
               {/* PEC */}
               {SITE_CONFIG.pec && (
