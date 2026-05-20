@@ -186,7 +186,7 @@ export default function ContattiPage() {
                   <h3 className="text-lg font-bold text-neutral-900">Zona Operativa</h3>
                 </div>
                 <p className="text-neutral-600">
-                  Servizi elettrici civili e industriali attivi su Bologna e provincia.
+                  Bologna e provincia
                 </p>
               </div>
 
