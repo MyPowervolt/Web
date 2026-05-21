@@ -211,7 +211,6 @@ export function Hero({
                         alt={founderImageAlt}
                         className="object-cover object-top"
                         fill
-                        priority
                         sizes="(max-width: 640px) 176px, (max-width: 768px) 208px, (max-width: 1024px) 270px, 320px"
                         src={founderImageSrc}
                       />
