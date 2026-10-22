@@ -25,6 +25,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: SITEMAP_CONFIG.homepage.priority,
     },
     {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/cookie-policy`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.2,
+    },
+    {
       url: `${baseUrl}/chi-siamo`,
       lastModified: new Date(),
       changeFrequency: SITEMAP_CONFIG.chiSiamo.changeFrequency,
