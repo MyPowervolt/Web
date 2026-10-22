@@ -391,3 +391,9 @@ filter:drop-shadow(0 0 3px rgba(255,194,26,.95)) drop-shadow(0 0 10px rgba(255,1
  .gst svg{width:19px !important;height:19px !important}
  .btn{padding:12px 18px;line-height:1.25;text-align:center;font-size:15px;letter-spacing:.04em}
 }
+
+/* Colori di base: evitano che i titoli prendano il colore scuro del resto del sito */
+.pv{color:#EDEAE4}
+.pv h1,.pv h2,.pv h3,.pv h4{color:#EDEAE4}
+/* Su touch non c'è hover: le illustrazioni delle schede restano visibili */
+@media (hover:none){.ico svg{opacity:1;transform:none}}
