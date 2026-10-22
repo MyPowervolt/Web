@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { inter } from "@/lib/fonts";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildOrganizationSchema, buildWebSiteSchema } from "@/lib/structured-data";
 import { SEO_CONFIG } from "@/lib/seo-config";
@@ -77,16 +75,7 @@ export default function RootLayout({
           Salta al contenuto principale
         </a>
 
-        {/* Site header — sticky */}
-        <Header />
-
-        {/* Main content */}
-        <main id="main-content" tabIndex={-1}>
-          {children}
-        </main>
-
-        {/* Site footer */}
-        <Footer />
+        {children}
 
         {/* WhatsApp floating button — renders on all pages */}
         {/* ⚠️ Enable once phone number is confirmed in SITE_CONFIG */}

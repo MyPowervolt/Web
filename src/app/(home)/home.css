@@ -1,0 +1,393 @@
+/* Stile della nuova homepage. Le classi sono dentro il contenitore .pv. */
+.pv{margin:0;background:#0B0D10}
+.pv a{color:inherit;text-decoration:none}
+.pv button{font-family:inherit}
+.pv :focus-visible{outline:2px solid #FFC21A;outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto;padding-left:40px;padding-right:40px}
+.disp{font-family:var(--font-barlow-condensed),sans-serif;text-transform:uppercase;font-weight:600;letter-spacing:.01em}
+.nav a{color:#C9CDD2;font-size:16px;font-weight:500}
+.nav a:hover{color:#FFC21A}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;font:600 16px/1 var(--font-barlow),sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border:1px solid transparent;transition:background .2s,border-color .2s,color .2s}
+.btn-p{background:#FFC21A;color:#0B0D10}
+.btn-p:hover{background:#FFD65C}
+.btn-g{border-color:#3A4048;color:#EDEAE4;background:transparent}
+.btn-g:hover{border-color:#FFC21A;color:#FFC21A}
+.dis{opacity:.4;cursor:not-allowed}
+.tab{min-height:48px;padding:0 24px;background:transparent;border:1px solid #2F353D;color:#C9CDD2;font:600 16px/1 var(--font-barlow),sans-serif;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.tab:hover{border-color:#FFC21A;color:#FFC21A}
+.tab.on{background:#FFC21A;border-color:#FFC21A;color:#0B0D10}
+.t3d{position:relative;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .25s,background .25s}
+.t3d:hover{z-index:20;transform:translateY(-12px) scale(1.035)}
+.card{background:#12151A;border:1px solid #232930}
+.card:hover{border-color:#FFC21A;background:#161A20;box-shadow:0 28px 50px -18px rgba(0,0,0,.8),0 0 40px rgba(255,194,26,.14)}
+.card:hover .arrow{transform:translateX(6px)}
+.quote:hover{box-shadow:0 28px 50px -18px rgba(0,0,0,.8),0 0 40px rgba(255,194,26,.12)}
+.stage{position:relative;height:164px;margin:0 0 22px;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid #1E242B;background:linear-gradient(rgba(255,194,26,.5),rgba(255,194,26,.5)) 10px 10px/16px 1px no-repeat,linear-gradient(rgba(255,194,26,.5),rgba(255,194,26,.5)) 10px 10px/1px 16px no-repeat,linear-gradient(rgba(255,194,26,.5),rgba(255,194,26,.5)) right 10px top 10px/16px 1px no-repeat,linear-gradient(rgba(255,194,26,.5),rgba(255,194,26,.5)) right 10px top 10px/1px 16px no-repeat,linear-gradient(rgba(255,194,26,.5),rgba(255,194,26,.5)) 10px bottom 10px/16px 1px no-repeat,linear-gradient(rgba(255,194,26,.5),rgba(255,194,26,.5)) 10px bottom 10px/1px 16px no-repeat,linear-gradient(rgba(255,194,26,.5),rgba(255,194,26,.5)) right 10px bottom 10px/16px 1px no-repeat,linear-gradient(rgba(255,194,26,.5),rgba(255,194,26,.5)) right 10px bottom 10px/1px 16px no-repeat,radial-gradient(ellipse at 50% 62%,rgba(255,194,26,.07),transparent 70%),linear-gradient(rgba(255,194,26,.05) 1px,transparent 1px) 0 0/20px 20px,linear-gradient(90deg,rgba(255,194,26,.05) 1px,transparent 1px) 0 0/20px 20px,#0E1116;transition:border-color .3s}
+.stage::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 55%,rgba(255,240,180,.95),rgba(255,194,26,.35) 38%,transparent 70%);opacity:0;pointer-events:none}
+.t3d:hover .stage::before{animation:flashpop .55s ease-out .1s forwards}
+@keyframes flashpop{0%{opacity:0}22%{opacity:.95}100%{opacity:0}}
+.t3d:hover .stage{border-color:rgba(255,194,26,.45)}
+.stage::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;background:linear-gradient(90deg,transparent,#FFE680 50%,transparent);box-shadow:0 0 16px 4px rgba(255,194,26,.55);opacity:0;pointer-events:none}
+.t3d:hover .stage::after{animation:scanup .95s cubic-bezier(.3,.6,.3,1) forwards}
+@keyframes scanup{0%{opacity:0;transform:translateY(0)}12%{opacity:1}88%{opacity:1}100%{opacity:0;transform:translateY(-176px)}}
+.ico{position:relative;display:block;width:142px;height:142px}
+.ico svg{width:100%;height:100%;overflow:visible;fill:none;opacity:0;transform:scale(.3) translateY(16px);filter:drop-shadow(0 10px 14px rgba(0,0,0,.55));transition:transform .6s cubic-bezier(.2,1.6,.4,1) .16s,opacity .18s .16s}
+.t3d:hover .ico svg{opacity:1;transform:scale(1) translateY(0)}
+.ico *{animation-play-state:paused}
+.t3d:hover .ico *{animation-play-state:running}
+.ico .led-on{animation:blink2 1.2s ease-in-out infinite alternate}
+.ico .win{animation:blink2 1.8s ease-in-out infinite alternate}
+.ico .glow{animation:blink2 1.4s ease-in-out infinite alternate}
+.ico .fil{animation:blink2 1.1s ease-in-out infinite alternate}
+.ico .patrol{transform-origin:36px 41px;animation:patrol 3.4s ease-in-out infinite alternate}
+.ico .beamg{animation:scan 1.5s ease-in-out infinite alternate}
+.ico .rec{animation:blink 1s steps(1) infinite}
+.ico .spin{transform-origin:98px 20px;animation:spin 10s linear infinite}
+.ico .puff{transform-box:fill-box;transform-origin:center;animation:puff 2.6s ease-out infinite}
+.ico .flow{stroke-dasharray:2 16;animation:flow 1.1s linear infinite}
+.ico .slide{animation:slide 2.8s ease-in-out infinite alternate}
+.ico .pulse{animation:pulse 1.8s ease-out infinite}
+.ico .charge{animation:charge 2.6s ease-in-out infinite}
+.ico .sheen{animation:sheen 2.6s ease-in-out infinite}
+.ico .knob{animation:knob 2.2s ease-in-out infinite alternate}
+.ico .kp{animation:kp 2.4s ease-in-out infinite}
+@keyframes blink{50%{opacity:.1}}
+@keyframes blink2{from{opacity:.35}to{opacity:1}}
+@keyframes patrol{from{transform:rotate(-18deg)}to{transform:rotate(18deg)}}
+@keyframes scan{from{opacity:.3}to{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes puff{0%{transform:translateY(0) scale(.6);opacity:.7}100%{transform:translateY(-24px) scale(1.6);opacity:0}}
+@keyframes flow{to{stroke-dashoffset:-36}}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(22px)}}
+@keyframes pulse{0%{opacity:0}30%{opacity:1}100%{opacity:0}}
+@keyframes charge{0%{stroke-dashoffset:94}80%,100%{stroke-dashoffset:0}}
+@keyframes sheen{0%{transform:translateX(-30px)}100%{transform:translateX(120px)}}
+@keyframes knob{from{transform:translateX(0)}to{transform:translateX(5px)}}
+@keyframes kp{0%,100%{fill:#3A4048}20%{fill:#FFC21A}}
+.ico .ir{animation:blink2 .9s ease-in-out infinite alternate}
+.ico .glint{animation:glint 3.4s ease-in-out infinite alternate}
+.ico .dimb{animation:dimmer 3.6s ease-in-out infinite}
+.ico .diff{animation:dimmer2 3.6s ease-in-out infinite}
+.ico .dknob{animation:dknob 3.6s ease-in-out infinite}
+.ico .dfill{transform-origin:28px 108px;animation:dfill 3.6s ease-in-out infinite}
+@keyframes glint{from{transform:translate(-1.4px,-1px)}to{transform:translate(1.4px,1px)}}
+@keyframes dimmer{0%,100%{opacity:.08}50%{opacity:1}}
+@keyframes dimmer2{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes dknob{0%,100%{transform:translateX(0)}50%{transform:translateX(64px)}}
+@keyframes dfill{0%,100%{transform:scaleX(.04)}50%{transform:scaleX(1)}}
+@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
+.storm{position:absolute;inset:-11px;padding:3px;pointer-events:none;opacity:0;transition:opacity .4s;border-radius:10px;
+background:conic-gradient(from var(--ang),transparent 0deg,transparent 215deg,rgba(255,194,26,.18) 250deg,rgba(255,194,26,.65) 320deg,#FFE680 350deg,#fff 357deg,transparent 360deg);
+-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
+filter:drop-shadow(0 0 3px rgba(255,194,26,.95)) drop-shadow(0 0 10px rgba(255,194,26,.55))}
+.storm svg{display:none}
+.t3d:hover > .storm{opacity:1;animation:orbit 6.5s linear infinite}
+@keyframes orbit{to{--ang:360deg}}
+@media (prefers-reduced-motion:reduce){.t3d:hover{transform:none}.t3d:hover > .storm{animation:none}.ico{transition:none}}
+.arrow{transition:transform .25s;display:inline-block}
+.opt{min-height:48px;padding:0 20px;background:#0B0D10;border:1px solid #2F353D;color:#C9CDD2;font:500 16px/1 var(--font-barlow),sans-serif;cursor:pointer;transition:all .2s}
+.opt:hover{border-color:#FFC21A}
+.opt.on{border-color:#FFC21A;background:#1B1A10;color:#FFC21A}
+.field{width:100%;min-height:48px;padding:0 14px;background:#0B0D10;border:1px solid #2F353D;color:#EDEAE4;font:400 16px/1 var(--font-barlow),sans-serif}
+.field:focus{border-color:#FFC21A;outline:none}
+.tile{position:relative;border:1px solid #232930}
+.tile:hover{border-color:#FFC21A;box-shadow:0 70px 90px -30px rgba(0,0,0,.85),0 0 60px rgba(255,194,26,.25),0 0 0 1px rgba(255,194,26,.4)}
+.tile .cap{transition:background .25s}
+.tile:hover .cap{background:#FFC21A !important;color:#0B0D10 !important}
+.tile:hover .cap span{color:#0B0D10 !important}
+.faqb{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px;padding:18px 0;background:transparent;border:0;border-bottom:1px solid #2A3038;color:#EDEAE4;text-align:left;font:600 22px/1.3 var(--font-barlow),sans-serif;cursor:pointer}
+.faqb:hover{color:#FFC21A}
+.faqi{flex:0 0 auto;width:32px;height:32px;border:1px solid #3A4048;display:inline-flex;align-items:center;justify-content:center;color:#FFC21A;font-size:22px;line-height:1}
+.ico .flick{animation:flick 3s ease-in-out infinite}
+@keyframes flick{0%,38%{transform:translateY(0)}46%,86%{transform:translateY(5px)}94%,100%{transform:translateY(0)}}
+.shade{position:fixed;inset:0;pointer-events:none;z-index:40;opacity:0;transition:opacity .45s;background:radial-gradient(circle calc(var(--r,380px) * .8) at var(--lx,-600px) var(--ly,-600px),rgba(255,206,110,.13),rgba(255,206,110,0) 100%),radial-gradient(circle var(--r,380px) at var(--lx,-600px) var(--ly,-600px),rgba(4,5,7,0) 0%,rgba(4,5,7,0) 30%,rgba(4,5,7,.1) 60%,rgba(4,5,7,.4) 100%)}
+.lamp-on .shade{opacity:1}
+.bulb{position:fixed;left:var(--lx,-600px);top:var(--ly,-600px);width:28px;height:28px;margin:-14px 0 0 -14px;pointer-events:none;z-index:60;opacity:0;transition:opacity .3s;transform:scale(calc(1 + var(--hot,0) * .35))}
+.lamp-on .bulb{opacity:1}
+.lamp-on,.lamp-on *{cursor:none !important}
+.lamp-on .field{cursor:text !important}
+.bulb svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 0 6px rgba(255,194,26,.9)) drop-shadow(0 0 16px rgba(255,194,26,.5))}
+.bulb .bg{animation:blink2 1.6s ease-in-out infinite alternate}
+.phbtn{display:inline-flex;align-items:center;gap:9px;min-height:36px;padding:0 16px 0 12px;border:1px solid #FFC21A;background:rgba(255,194,26,.08);color:#EDEAE4;font:600 16px/1 var(--font-barlow),sans-serif;letter-spacing:.03em;cursor:pointer;transition:background .2s,color .2s}
+.phbtn svg{transition:fill .2s}
+.phbtn:hover{background:#FFC21A;color:#0B0D10}
+.phbtn:hover svg{fill:#0B0D10}
+.wapill{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 14px 0 10px;border:1px solid #2E6B45;background:rgba(37,211,102,.1);color:#EDEAE4;font:600 14px/1 var(--font-barlow),sans-serif;letter-spacing:.04em;transition:background .2s,border-color .2s}
+.wapill:hover{background:rgba(37,211,102,.22);border-color:#25D366}
+.lampbtn{position:fixed;left:18px;bottom:18px;z-index:70;display:flex;align-items:center;gap:10px;min-height:44px;padding:0 16px 0 12px;background:#12151A;border:1px solid #3A4048;color:#EDEAE4;font:600 14px/1 var(--font-barlow),sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.lampbtn:hover{border-color:#FFC21A}
+@media (hover:none),(pointer:coarse),(max-width:760px){.ico svg{opacity:1 !important;transform:none !important}}
+@media (hover:none),(pointer:coarse),(max-width:760px){.shade,.bulb,.lampbtn{display:none !important}.lamp-on,.lamp-on *{cursor:auto !important}}
+@media (prefers-reduced-motion:reduce){.shade{transition:none}}
+.ico .patrolS{transform-origin:36px 41px;transform:rotate(-16deg)}
+.t3d:hover .ico .patrolS{animation:patrolS 6s ease-in-out infinite}
+.ico .beamR{opacity:0}
+.t3d:hover .ico .beamR{animation:bred 6s linear infinite}
+.t3d:hover .ico .beamY{animation:byel 6s linear infinite}
+.ico .thief{transform:translateX(80px)}
+.t3d:hover .ico .thief{animation:thief 6s ease-in-out infinite}
+.t3d:hover .ico .hop{animation:hop 6s ease-out infinite}
+.ico .tf{transform-origin:158px 90px}
+.t3d:hover .ico .tf{animation:flip 6s steps(1) infinite}
+.ico .legA,.ico .legB{transform-origin:158px 94px}
+.t3d:hover .ico .legA{animation:legA 6s linear infinite}
+.t3d:hover .ico .legB{animation:legB 6s linear infinite}
+.ico .det{opacity:0}
+.t3d:hover .ico .det{animation:det 6s linear infinite}
+@keyframes patrolS{0%{transform:rotate(-16deg)}14%{transform:rotate(8deg)}28%{transform:rotate(-6deg)}40%{transform:rotate(-4deg)}46%{transform:rotate(26deg)}80%{transform:rotate(26deg)}92%{transform:rotate(-16deg)}100%{transform:rotate(-16deg)}}
+@keyframes byel{0%,43%{opacity:1}46%,82%{opacity:0}86%,100%{opacity:1}}
+@keyframes bred{0%,44%{opacity:0}47%{opacity:1}52%{opacity:.45}57%{opacity:1}62%{opacity:.45}67%{opacity:1}72%{opacity:.5}77%{opacity:1}82%{opacity:1}86%,100%{opacity:0}}
+@keyframes thief{0%,16%{transform:translateX(80px)}30%{transform:translateX(26px)}42%{transform:translateX(0)}62%{transform:translateX(0)}82%{transform:translateX(90px)}100%{transform:translateX(90px)}}
+@keyframes hop{0%,46%{transform:translateY(0)}49%{transform:translateY(-9px)}53%{transform:translateY(0)}100%{transform:translateY(0)}}
+@keyframes flip{0%,61%{transform:scaleX(1)}62%,100%{transform:scaleX(-1)}}
+@keyframes legA{0%,28%{transform:rotate(0)}32%{transform:rotate(22deg)}36%{transform:rotate(-22deg)}40%{transform:rotate(22deg)}43%,62%{transform:rotate(0)}65%{transform:rotate(40deg)}68%{transform:rotate(-40deg)}71%{transform:rotate(40deg)}74%{transform:rotate(-40deg)}77%{transform:rotate(40deg)}80%{transform:rotate(-40deg)}83%,100%{transform:rotate(0)}}
+@keyframes legB{0%,28%{transform:rotate(0)}32%{transform:rotate(-22deg)}36%{transform:rotate(22deg)}40%{transform:rotate(-22deg)}43%,62%{transform:rotate(0)}65%{transform:rotate(-40deg)}68%{transform:rotate(40deg)}71%{transform:rotate(-40deg)}74%{transform:rotate(40deg)}77%{transform:rotate(-40deg)}80%{transform:rotate(40deg)}83%,100%{transform:rotate(0)}}
+@keyframes det{0%,46%{opacity:0}48%{opacity:1}52%{opacity:.3}56%{opacity:1}62%{opacity:1}64%,100%{opacity:0}}
+.ico .car{transform:translateX(140px)}
+.t3d:hover .ico .car{animation:carA 8s infinite}
+.ico .wheel1{transform-origin:82px 100px}
+.ico .wheel2{transform-origin:146px 100px}
+.t3d:hover .ico .wheel{animation:wheelA 8s linear infinite}
+.ico .tail{opacity:.3}
+.t3d:hover .ico .tail{animation:tailA 8s linear infinite}
+.ico .cableW{stroke-dasharray:1;stroke-dashoffset:1}
+.t3d:hover .ico .cableW{animation:cableA 8s ease-in-out infinite}
+.ico .cflow{opacity:0;stroke-dasharray:2 8}
+.t3d:hover .ico .cflow{animation:cflowA 8s linear infinite}
+.ico .ringW{stroke-dasharray:53.4;stroke-dashoffset:53.4}
+.t3d:hover .ico .ringW{animation:ringA 8s linear infinite}
+.ico .plugW{opacity:0}
+.t3d:hover .ico .plugW{animation:plugA 8s linear infinite}
+.ico .sill{opacity:0}
+.t3d:hover .ico .sill{animation:sillA 8s linear infinite}
+.ico .sfill{transform-origin:94px 96.7px;transform:scaleX(.02)}
+.t3d:hover .ico .sfill{animation:sfillA 8s linear infinite}
+.ico .pglow{opacity:0}
+.t3d:hover .ico .pglow{animation:pglowA 8s linear infinite}
+@keyframes carA{0%{transform:translateX(140px);animation-timing-function:cubic-bezier(.25,.7,.3,1)}28%{transform:translateX(0)}78%{transform:translateX(0);animation-timing-function:cubic-bezier(.5,0,.9,.6)}96%,100%{transform:translateX(-300px)}}
+@keyframes wheelA{0%{transform:rotate(0)}28%{transform:rotate(-900deg)}78%{transform:rotate(-900deg)}96%,100%{transform:rotate(-2000deg)}}
+@keyframes tailA{0%,26%{opacity:.3}28%,35%{opacity:1}37%,100%{opacity:.3}}
+@keyframes cableA{0%,34%{stroke-dashoffset:1}42%{stroke-dashoffset:0}72%{stroke-dashoffset:0}77%,100%{stroke-dashoffset:1}}
+@keyframes cflowA{0%,42%{opacity:0;stroke-dashoffset:0}44%{opacity:1}70%{opacity:1;stroke-dashoffset:-110}72%,100%{opacity:0;stroke-dashoffset:-110}}
+@keyframes ringA{0%,42%{stroke-dashoffset:53.4}70%,74%{stroke-dashoffset:0}79%,100%{stroke-dashoffset:53.4}}
+@keyframes plugA{0%,41%{opacity:0}43%,74%{opacity:1}76%,100%{opacity:0}}
+@keyframes sillA{0%,42%{opacity:0}44%,76%{opacity:1}80%,100%{opacity:0}}
+@keyframes sfillA{0%,42%{transform:scaleX(.02)}70%,100%{transform:scaleX(1)}}
+@keyframes pglowA{0%,42%{opacity:0}46%{opacity:.95}52%{opacity:.3}58%{opacity:.95}64%{opacity:.3}70%{opacity:.95}74%{opacity:.95}78%,100%{opacity:0}}
+.ico .doorP{transform-origin:45px 61px}
+.t3d:hover .ico .doorP{animation:doorA 8s ease-in-out infinite}
+.ico .litY,.ico .litG,.ico .litBg{opacity:0}
+.t3d:hover .ico .litY,.t3d:hover .ico .litG,.t3d:hover .ico .litBg{animation:litA 8s linear infinite}
+.ico .wflow{opacity:0;stroke-dasharray:2 7}
+.t3d:hover .ico .wflow{animation:wflowA 8s linear infinite}
+.t3d:hover .ico .lockR{animation:lockRA 8s linear infinite}
+.ico .lockG{opacity:0}
+.t3d:hover .ico .lockG{animation:lockGA 8s linear infinite}
+.t3d:hover .ico .kA{animation:kAA 8s linear infinite}
+.t3d:hover .ico .kB{animation:kBA 8s linear infinite}
+.t3d:hover .ico .kC{animation:kCA 8s linear infinite}
+.t3d:hover .ico .kD{animation:kDA 8s linear infinite}
+.ico .click{opacity:0;transform-box:fill-box;transform-origin:center}
+.t3d:hover .ico .click{animation:clickA 8s linear infinite}
+@keyframes doorA{0%,26%{transform:scaleX(1)}36%{transform:scaleX(.12)}76%{transform:scaleX(.12)}88%,100%{transform:scaleX(1)}}
+@keyframes litA{0%,37%{opacity:0}43%{opacity:1}74%{opacity:1}82%,100%{opacity:0}}
+@keyframes wflowA{0%,38%{opacity:0;stroke-dashoffset:0}42%{opacity:1}72%{opacity:1;stroke-dashoffset:-90}76%,100%{opacity:0;stroke-dashoffset:-90}}
+@keyframes lockRA{0%,22%{opacity:1}23%,80%{opacity:0}84%,100%{opacity:1}}
+@keyframes lockGA{0%,22%{opacity:0}23%,80%{opacity:1}84%,100%{opacity:0}}
+@keyframes kAA{0%,12%{fill:#3A4048}13%,15%{fill:#FFC21A}16%,100%{fill:#3A4048}}
+@keyframes kBA{0%,14%{fill:#3A4048}15%,17%{fill:#FFC21A}18%,100%{fill:#3A4048}}
+@keyframes kCA{0%,16%{fill:#3A4048}17%,19%{fill:#FFC21A}20%,100%{fill:#3A4048}}
+@keyframes kDA{0%,18%{fill:#3A4048}19%,21%{fill:#FFC21A}22%,100%{fill:#3A4048}}
+@keyframes clickA{0%,22%{opacity:0;transform:scale(.4)}23%{opacity:.9;transform:scale(.6)}30%{opacity:0;transform:scale(2.4)}100%{opacity:0;transform:scale(2.4)}}
+.ico .finger{opacity:0}
+.t3d:hover .ico .finger{animation:fingerA 8s ease-in-out infinite}
+.ico .ripple{opacity:0;transform-box:fill-box;transform-origin:center}
+.t3d:hover .ico .ripple{animation:rippleA 8s linear infinite}
+.ico .appbtn{transform-box:fill-box;transform-origin:center}
+.t3d:hover .ico .appbtn{animation:appbtnA 8s linear infinite}
+.t3d:hover .ico .lockUI{animation:lockUIA 8s ease-in-out infinite}
+.ico .wifi{opacity:0}
+.t3d:hover .ico .wifi{animation:wifiA 8s linear infinite}
+.ico .sig{stroke-dasharray:2 14;opacity:0}
+.t3d:hover .ico .sig{animation:sigA 8s linear infinite}
+.ico .sigbase{opacity:0}
+.t3d:hover .ico .sigbase{animation:sigbaseA 8s linear infinite}
+@keyframes fingerA{0%,2%{opacity:0;transform:translate(10px,16px)}5%{opacity:1;transform:translate(0,0)}7%{opacity:1;transform:translate(-.8px,-1px)}10%,100%{opacity:0;transform:translate(10px,16px)}}
+@keyframes rippleA{0%,6%{opacity:0;transform:scale(.3)}7%{opacity:.9;transform:scale(.5)}13%{opacity:0;transform:scale(2.2)}100%{opacity:0}}
+@keyframes appbtnA{0%,5%{transform:scale(1)}7%{transform:scale(.88)}10%,100%{transform:scale(1)}}
+@keyframes lockUIA{0%,8%{transform:translateY(0)}12%,80%{transform:translateY(-3.6px)}86%,100%{transform:translateY(0)}}
+@keyframes wifiA{0%,7%{opacity:0}9%{opacity:1}13%{opacity:.4}16%{opacity:1}20%,100%{opacity:0}}
+@keyframes sigA{0%,8%{opacity:0;stroke-dashoffset:0}10%{opacity:1}20%{opacity:1;stroke-dashoffset:-60}22%,100%{opacity:0;stroke-dashoffset:-60}}
+@keyframes sigbaseA{0%,8%{opacity:0}10%,20%{opacity:.55}22%,100%{opacity:0}}
+.ico .dmShut{transform-box:fill-box;transform-origin:50% 0;transform:scaleY(0)}
+.t3d:hover .ico .dmShut{animation:dmShut 8s ease-in-out infinite}
+.ico .dmLamp{opacity:0}
+.t3d:hover .ico .dmLamp{animation:dmLamp 8s linear infinite}
+.ico .dmNight{opacity:0}
+.t3d:hover .ico .dmNight{animation:dmLamp 8s linear infinite}
+.t3d:hover .ico .dmDay{animation:dmDay 8s linear infinite}
+.t3d:hover .ico .dmT1{animation:dmDay 8s linear infinite}
+.ico .dmT2{opacity:0}
+.t3d:hover .ico .dmT2{animation:dmLamp 8s linear infinite}
+.ico .dmBar{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(.8)}
+.t3d:hover .ico .dmBar{animation:dmBar 8s ease-in-out infinite}
+.ico .dmF1,.ico .dmF2{opacity:0}
+.t3d:hover .ico .dmF1{animation:dmF1 8s ease-in-out infinite}
+.t3d:hover .ico .dmF2{animation:dmF2 8s ease-in-out infinite}
+.ico .dmR2{opacity:0;transform-box:fill-box;transform-origin:center}
+.t3d:hover .ico .dmR2{animation:dmR2 8s linear infinite}
+.t3d:hover .ico .ripple{animation:dmR1 8s linear infinite}
+@keyframes dmShut{0%,10%{transform:scaleY(0)}28%,68%{transform:scaleY(1)}86%,100%{transform:scaleY(0)}}
+@keyframes dmLamp{0%,16%{opacity:0}30%,68%{opacity:1}84%,100%{opacity:0}}
+@keyframes dmDay{0%,16%{opacity:1}30%,68%{opacity:0}84%,100%{opacity:1}}
+@keyframes dmBar{0%,16%{transform:scaleX(.8)}30%,68%{transform:scaleX(.35)}84%,100%{transform:scaleX(.8)}}
+@keyframes dmF1{0%,3%{opacity:0;transform:translate(8px,14px)}6%,9%{opacity:1;transform:translate(0,0)}13%,100%{opacity:0;transform:translate(8px,14px)}}
+@keyframes dmF2{0%,66%{opacity:0;transform:translate(8px,14px)}69%,72%{opacity:1;transform:translate(0,0)}76%,100%{opacity:0;transform:translate(8px,14px)}}
+@keyframes dmR1{0%,7%{opacity:0;transform:scale(.3)}8%{opacity:.9;transform:scale(.5)}14%{opacity:0;transform:scale(2)}100%{opacity:0}}
+@keyframes dmR2{0%,70%{opacity:0;transform:scale(.3)}71%{opacity:.9;transform:scale(.5)}77%{opacity:0;transform:scale(2)}100%{opacity:0}}
+.ico .gS{transform:translateX(0)}
+.t3d:hover .ico .gS{animation:gSlide 8s ease-in-out infinite}
+.ico .gKid{transform:translate(60px,114px) scale(1)}
+.t3d:hover .ico .gKid{animation:gKid 8s linear infinite}
+.ico .gLegA,.ico .gLegB{transform-box:fill-box;transform-origin:50% 0}
+.t3d:hover .ico .gLegA{animation:gLeg .6s ease-in-out infinite alternate}
+.t3d:hover .ico .gLegB{animation:gLeg .6s ease-in-out infinite alternate-reverse}
+.t3d:hover .ico .gBall{animation:gBounce .6s ease-in infinite alternate}
+.ico .gBeam{opacity:.25}
+.t3d:hover .ico .gBeam{animation:gBeam 8s linear infinite}
+.ico .gFlash{opacity:0}
+.t3d:hover .ico .gFlash{animation:gFlash 8s linear infinite}
+.t3d:hover .ico .gLed{animation:blink2 .5s linear infinite alternate}
+.t3d:hover .ico .gDoorLt{animation:gDoor 8s linear infinite}
+@keyframes gSlide{0%,8%{transform:translateX(0)}22%,34%{transform:translateX(36px)}40%{transform:translateX(20px)}46%,66%{transform:translateX(36px)}84%,100%{transform:translateX(0)}}
+@keyframes gKid{0%,10%{opacity:1;transform:translate(60px,114px) scale(1)}36%{opacity:1;transform:translate(60px,90px) scale(.56)}46%{opacity:1;transform:translate(60px,86px) scale(.46)}62%{opacity:1;transform:translate(60px,82px) scale(.38)}66%{opacity:0;transform:translate(60px,82px) scale(.36)}67%,98%{opacity:0;transform:translate(60px,114px) scale(1)}100%{opacity:1;transform:translate(60px,114px) scale(1)}}
+@keyframes gLeg{from{transform:rotate(-26deg)}to{transform:rotate(26deg)}}
+@keyframes gBounce{from{transform:translateY(-8px)}to{transform:translateY(0)}}
+@keyframes gBeam{0%,30%{opacity:.25}32%,50%{opacity:1}54%,100%{opacity:.25}}
+@keyframes gFlash{0%,8%{opacity:0}10%,22%{opacity:.9}24%,34%{opacity:0}35%,47%{opacity:.9}49%,66%{opacity:0}67%,84%{opacity:.9}86%,100%{opacity:0}}
+@keyframes gDoor{0%,55%{opacity:0}64%,80%{opacity:.35}90%,100%{opacity:0}}
+.ico .dmSig{opacity:0;stroke-dasharray:2 3}
+.t3d:hover .ico .dmSig{animation:dmSig 8s linear infinite}
+.t3d:hover .ico .dmAir{animation:dmDay 8s linear infinite,dmAirM .9s ease-in-out infinite alternate}
+.t3d:hover .ico .dmTvG{animation:blink2 .9s ease-in-out infinite alternate}
+.t3d:hover .ico .dmBtn{animation:dmBtn 8s linear infinite}
+@keyframes dmBtn{0%,8%{fill:#FFC21A}12%,68%{fill:#CFD4DA}72%,100%{fill:#FFC21A}}
+@keyframes dmAirM{from{transform:translateY(0)}to{transform:translateY(3px)}}
+@keyframes dmSig{0%,7%{opacity:0;stroke-dashoffset:0}9%{opacity:1}22%{opacity:1;stroke-dashoffset:-14}24%,69%{opacity:0}71%{opacity:1;stroke-dashoffset:0}84%{opacity:1;stroke-dashoffset:-14}86%,100%{opacity:0}}
+.ico .fvRays{animation:fvSpin 12s linear infinite}
+@keyframes fvSpin{to{transform:rotate(360deg)}}
+.ico .fvBeam{stroke-dasharray:2 6;opacity:0}
+.t3d:hover .ico .fvBeam{animation:fvB 1.1s linear infinite}
+@keyframes fvB{0%{opacity:1;stroke-dashoffset:0}100%{opacity:1;stroke-dashoffset:-16}}
+.t3d:hover .ico .fvCell{animation:fvC 2.4s ease-in-out infinite}
+@keyframes fvC{0%,100%{filter:brightness(1)}50%{filter:brightness(1.7)}}
+.ico .fvFlow{stroke-dasharray:2 9;opacity:0}
+.t3d:hover .ico .fvFlow{animation:fvF 1.2s linear infinite}
+@keyframes fvF{0%{opacity:1;stroke-dashoffset:0}100%{opacity:1;stroke-dashoffset:-22}}
+.ico .fvLit{opacity:.15}
+.t3d:hover .ico .fvLit{animation:fvL 3s ease-in-out infinite}
+@keyframes fvL{0%,20%{opacity:.15}40%,100%{opacity:1}}
+.ico .fvBat{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(.15)}
+.t3d:hover .ico .fvBat{animation:fvBt 6s ease-in-out infinite}
+@keyframes fvBt{0%,10%{transform:scaleY(.15)}85%,95%{transform:scaleY(1)}100%{transform:scaleY(.15)}}
+.ico .cvW{opacity:.1}
+.t3d:hover .ico .cvA{animation:cvA 6s linear infinite}
+.t3d:hover .ico .cvB{animation:cvB 6s linear infinite}
+.t3d:hover .ico .cvC{animation:cvC 6s linear infinite}
+@keyframes cvA{0%,18%{opacity:.1}24%,84%{opacity:1}92%,100%{opacity:.1}}
+@keyframes cvB{0%,30%{opacity:.1}36%,84%{opacity:1}92%,100%{opacity:.1}}
+@keyframes cvC{0%,42%{opacity:.1}48%,84%{opacity:1}92%,100%{opacity:.1}}
+.ico .cvFl{stroke-dasharray:2 9;opacity:0}
+.t3d:hover .ico .cvFl{animation:cvF 1.1s linear infinite}
+@keyframes cvF{0%{opacity:1;stroke-dashoffset:0}100%{opacity:1;stroke-dashoffset:-22}}
+.ico .cvCert{opacity:0}
+.t3d:hover .ico .cvCert{animation:cvCert 6s ease-out infinite}
+@keyframes cvCert{0%,55%{opacity:0;transform:translateY(5px)}64%,88%{opacity:1;transform:translateY(0)}96%,100%{opacity:0;transform:translateY(0)}}
+.ico .cvCk{stroke-dasharray:1;stroke-dashoffset:1}
+.t3d:hover .ico .cvCk{animation:cvCk 6s linear infinite}
+@keyframes cvCk{0%,64%{stroke-dashoffset:1}72%,100%{stroke-dashoffset:0}}
+.ico .cvDial{transform-origin:72px 98px}
+.t3d:hover .ico .cvDial{animation:cvD 1.4s linear infinite}
+@keyframes cvD{to{transform:rotate(360deg)}}
+.t3d:hover .ico .cvLamp{animation:blink2 2s ease-in-out infinite alternate}
+.ico .inFl{stroke-dasharray:2 9;opacity:0}
+.t3d:hover .ico .inFl{animation:cvF 1.1s linear infinite}
+.t3d:hover .ico .inBox{animation:inBox 3.9s linear infinite}
+@keyframes inBox{0%{transform:translateX(-8px);opacity:0}8%{opacity:1}88%{opacity:1}100%{transform:translateX(34px);opacity:0}}
+.ico .inSm{opacity:0;transform-box:fill-box;transform-origin:center}
+.t3d:hover .ico .inSm{animation:inSm 2.7s ease-out infinite}
+@keyframes inSm{0%{opacity:.7;transform:translate(0,0) scale(.5)}100%{opacity:0;transform:translate(8px,-22px) scale(2)}}
+.t3d:hover .ico .inGlow{animation:inG 1.6s ease-in-out infinite alternate}
+@keyframes inG{from{opacity:.08}to{opacity:.28}}
+.t3d:hover .ico .inW{animation:blink2 2.2s ease-in-out infinite alternate}
+.ico .ctV{transform:translateX(-46px) translateX(29px)}
+.t3d:hover .ico .ctV{animation:ctV 7s ease-in-out infinite}
+@keyframes ctV{0%{transform:translate(-18px,0);opacity:0}2%{opacity:1}14%,60%{transform:translate(29px,0);opacity:1}72%{transform:translate(52px,0);opacity:0}73%,100%{transform:translate(-18px,0);opacity:0}}
+.ico .ctArm{opacity:0}
+.t3d:hover .ico .ctArm{animation:ctArm 7s linear infinite}
+@keyframes ctArm{0%,13%{opacity:0}15%,22%{opacity:1}24%,100%{opacity:0}}
+.t3d:hover .ico .ctBtn{animation:ctBtn 7s linear infinite}
+@keyframes ctBtn{0%,15%{fill:#FFC21A}17%,24%{fill:#FFF3B0}26%,100%{fill:#FFC21A}}
+.ico .ctRip,.ico .ctOpenR{opacity:0;transform-box:fill-box;transform-origin:center}
+.t3d:hover .ico .ctRip{animation:ctRip 7s linear infinite}
+@keyframes ctRip{0%,16%{opacity:0;transform:scale(.4)}17%{opacity:.9;transform:scale(.6)}24%{opacity:0;transform:scale(2.2)}100%{opacity:0}}
+.ico .ctRing{opacity:0}
+.t3d:hover .ico .ctRing{animation:ctRing 7s linear infinite}
+@keyframes ctRing{0%,18%{opacity:0}20%{opacity:1}23%{opacity:.3}26%{opacity:1}29%,100%{opacity:0}}
+.ico .ctSig{stroke-dasharray:2 7;opacity:0}
+.t3d:hover .ico .ctSig{animation:ctSig 7s linear infinite}
+@keyframes ctSig{0%,16%{opacity:0;stroke-dashoffset:0}18%{opacity:1}30%{opacity:1;stroke-dashoffset:-30}32%,100%{opacity:0}}
+.ico .ctScr{opacity:0}
+.t3d:hover .ico .ctScr{animation:ctScr 7s linear infinite}
+@keyframes ctScr{0%,28%{opacity:0}32%,70%{opacity:1}76%,100%{opacity:0}}
+.ico .ctFinger{opacity:0}
+.t3d:hover .ico .ctFinger{animation:ctFg 7s ease-in-out infinite}
+@keyframes ctFg{0%,44%{opacity:0;transform:translate(8px,14px)}47%,52%{opacity:1;transform:translate(0,0)}56%,100%{opacity:0;transform:translate(8px,14px)}}
+.t3d:hover .ico .ctOpenR{animation:ctOR 7s linear infinite}
+@keyframes ctOR{0%,48%{opacity:0;transform:scale(.4)}49%{opacity:.9;transform:scale(.6)}56%{opacity:0;transform:scale(2.2)}100%{opacity:0}}
+.ico .ctDoor{transform-box:fill-box;transform-origin:0 50%}
+.t3d:hover .ico .ctDoor{animation:ctDoor 7s ease-in-out infinite}
+@keyframes ctDoor{0%,52%{transform:scaleX(1)}58%,76%{transform:scaleX(.12)}86%,100%{transform:scaleX(1)}}
+.t3d:hover .ico .ctIn{animation:ctIn 7s linear infinite}
+@keyframes ctIn{0%,52%{opacity:0}58%,76%{opacity:.25}86%,100%{opacity:0}}
+.t3d:hover .ico .ctLed{animation:blink2 .8s linear infinite alternate}
+.t3d:hover .ico .gmRgb{animation:gmHue 5s linear infinite}
+.t3d:hover .ico .gmRgbC{animation:gmHue 5s linear infinite}
+@keyframes gmHue{to{filter:hue-rotate(360deg)}}
+.ico .gmFl{stroke-dasharray:2 9;opacity:0}
+.t3d:hover .ico .gmFl{animation:fvF 1.1s linear infinite}
+.t3d:hover .ico .gmL{animation:gmL 1.8s linear infinite}
+.ico .gmL{opacity:0}
+@keyframes gmL{0%{opacity:0;transform:translateY(0)}15%{opacity:1}100%{opacity:1;transform:translateY(13px)}}
+.ico .acBadge{transform:translate(-26px,16px) rotate(-14deg);opacity:0}
+.t3d:hover .ico .acBadge{animation:acBadge 8s ease-in-out infinite}
+@keyframes acBadge{0%,4%{opacity:0;transform:translate(-26px,16px) rotate(-14deg)}6%{opacity:1}16%,22%{opacity:1;transform:translate(-18px,12px) rotate(0)}30%,100%{opacity:0;transform:translate(-26px,16px) rotate(-14deg)}}
+.ico .acG,.ico .acArrow,.ico .acWave{opacity:0}
+.t3d:hover .ico .acG{animation:acOn 8s linear infinite}
+.t3d:hover .ico .acArrow{animation:acOn 8s linear infinite}
+.t3d:hover .ico .acR{animation:acOff 8s linear infinite}
+.t3d:hover .ico .acX{animation:acOff 8s linear infinite}
+.t3d:hover .ico .acWave{animation:acW 8s linear infinite}
+@keyframes acOn{0%,20%{opacity:0}22%,68%{opacity:1}72%,100%{opacity:0}}
+@keyframes acOff{0%,20%{opacity:1}22%,68%{opacity:0}72%,100%{opacity:1}}
+@keyframes acW{0%,15%{opacity:0}17%{opacity:1}19%{opacity:.3}21%{opacity:1}24%,100%{opacity:0}}
+.ico .acFlapL{transform-origin:61px 87px}
+.ico .acFlapR{transform-origin:99px 87px}
+.t3d:hover .ico .acFlapL,.t3d:hover .ico .acFlapR{animation:acFlap 8s ease-in-out infinite}
+@keyframes acFlap{0%,22%{transform:scaleX(1)}30%,64%{transform:scaleX(.1)}72%,100%{transform:scaleX(1)}}
+.ico .acPerson{transform:translateX(-16px);opacity:0}
+.t3d:hover .ico .acPerson{animation:acPerson 8s linear infinite}
+@keyframes acPerson{0%,28%{opacity:0;transform:translateX(-16px)}29%{opacity:1;transform:translateX(-16px)}62%{opacity:1;transform:translateX(138px)}63%,100%{opacity:0;transform:translateX(138px)}}
+.ico .acLegA,.ico .acLegB{transform-box:fill-box;transform-origin:50% 0}
+.t3d:hover .ico .acLegA{animation:gLeg .55s ease-in-out infinite alternate}
+.t3d:hover .ico .acLegB{animation:gLeg .55s ease-in-out infinite alternate-reverse}
+.heroph:hover .heroimg{transform:scale(1.05)}
+@media (max-width:760px){
+ .wrap{padding-left:20px;padding-right:20px}
+ .h1{font-size:48px !important}
+ .h2{font-size:38px !important}
+ .hidem{display:none !important}
+ .stl{font-size:10.5px !important;letter-spacing:.03em !important;overflow-wrap:anywhere}
+ .gst svg{width:19px !important;height:19px !important}
+ .btn{padding:12px 18px;line-height:1.25;text-align:center;font-size:15px;letter-spacing:.04em}
+}
