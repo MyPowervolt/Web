@@ -1,0 +1,15 @@
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+
+/** Layout delle pagine interne (servizi, chi siamo, contatti, pagine locali). */
+export default function SiteLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Header />
+      <main id="main-content" tabIndex={-1}>
+        {children}
+      </main>
+      <Footer />
+    </>
+  );
+}
