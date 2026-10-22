@@ -3,16 +3,16 @@ import { SITE_CONFIG } from "@/data/site-config";
 import { SERVICES } from "@/data/services";
 import { SEO_CONFIG } from "./seo-config";
 
-// ─── Organization + LocalBusiness + ElectricalContractor ─────────────────────
+// ─── Local electrical business ──────────────────────────────────────────────
 
 /**
  * Core organisation schema. Injected on every page via root layout.
- * Uses @type array for maximum richness in search results.
+ * Electrician is the Schema.org subtype for an electrical business.
  */
 export function buildOrganizationSchema(): JsonLdObject {
   return {
     "@context": "https://schema.org",
-    "@type": ["Organization", "LocalBusiness", "ElectricalContractor"],
+    "@type": "Electrician",
     "@id": `${SEO_CONFIG.siteUrl}/#organization`,
     name: SITE_CONFIG.companyName,
     legalName: SITE_CONFIG.legalName,
@@ -24,7 +24,7 @@ export function buildOrganizationSchema(): JsonLdObject {
       width: 400,
       height: 122,
     },
-    image: `${SEO_CONFIG.siteUrl}/og-default.jpg`,
+    image: SEO_CONFIG.defaultOgImage,
     telephone: SITE_CONFIG.phone,
     email: SITE_CONFIG.email,
     address: {
@@ -39,7 +39,11 @@ export function buildOrganizationSchema(): JsonLdObject {
       .filter((h) => /^\d{2}:\d{2}–\d{2}:\d{2}$/.test(h.hours))
       .map((h) => ({
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: h.days,
+        dayOfWeek: (h.days === "Lunedì–Venerdì"
+          ? ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+          : []).map(
+          (day) => `https://schema.org/${day}`,
+        ),
         opens: h.hours.split("–")[0]?.trim() ?? "",
         closes: h.hours.split("–")[1]?.trim() ?? "",
       })),
@@ -80,7 +84,7 @@ export function buildOrganizationSchema(): JsonLdObject {
 
 // ─── WebSite ─────────────────────────────────────────────────────────────────
 
-/** WebSite schema with SearchAction for Google Sitelinks Searchbox. Homepage only. */
+/** WebSite identity. Do not advertise a search endpoint that does not exist. */
 export function buildWebSiteSchema(): JsonLdObject {
   return {
     "@context": "https://schema.org",
@@ -92,14 +96,6 @@ export function buildWebSiteSchema(): JsonLdObject {
     inLanguage: SEO_CONFIG.language,
     publisher: {
       "@id": `${SEO_CONFIG.siteUrl}/#organization`,
-    },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${SEO_CONFIG.siteUrl}/ricerca?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
     },
   };
 }
@@ -119,8 +115,8 @@ export function buildServiceSchema(service: Service): JsonLdObject {
       "@id": `${SEO_CONFIG.siteUrl}/#organization`,
     },
     areaServed: {
-      "@type": "Country",
-      name: "Italia",
+      "@type": "AdministrativeArea",
+      name: "Città Metropolitana di Bologna",
     },
     serviceType: service.name,
     offers: {

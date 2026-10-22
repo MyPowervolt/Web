@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowUpRight, MapPin } from "lucide-react";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { WhyUs } from "@/components/sections/WhyUs";
@@ -80,25 +82,60 @@ export default function HomePage() {
 
       {/* [1] Hero — founder identity layout */}
       <Hero
-        badge="Impianti Elettrici Professionali"
-        ctaPrimaryHref="/chi-siamo"
-        ctaPrimaryText="Scopri chi sono"
+        badge="Zola Predosa · Bologna e dintorni"
+        ctaPrimaryHref="/contatti#sopralluogo"
+        ctaPrimaryText="Richiedi un sopralluogo"
         ctaSecondaryHref="/servizi"
         ctaSecondaryText="Scopri i Servizi"
         founderImageSrc="/img/founder-profile.png"
         headline={
           <>
-            Impianti Elettrici
+            Il tuo elettricista a
             <br />
-            Civili e Industriali
+            <span className="text-brand-primary">Zola Predosa e Bologna.</span>
           </>
         }
         layout="founder"
-        subheadline="Impianti elettrici realizzati con cura, sicurezza e contatto diretto con il titolare."
+        subheadline="Dalla tua casa alla tua azienda: impianti elettrici, domotica e automazioni realizzati con cura. Un unico referente, dal primo sopralluogo alla consegna."
       />
 
       {/* [2] Services */}
       <Services variant="full" />
+
+      <Section aria-labelledby="local-heading" variant="dark">
+        <Container>
+          <div className="grid items-start gap-10 lg:grid-cols-2">
+            <div>
+              <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-primary">
+                <MapPin aria-hidden="true" className="h-4 w-4" /> Vicino a te
+              </p>
+              <h2 id="local-heading" className="text-3xl font-extrabold tracking-tight md:text-4xl">
+                Un professionista del territorio. Un contatto diretto.
+              </h2>
+              <p className="mt-5 max-w-xl leading-relaxed text-neutral-300">
+                PowerVolt ha sede a Zola Predosa e lavora a Bologna e nei comuni vicini,
+                tra cui Casalecchio di Reno, Sasso Marconi e Valsamoggia.
+                Raccontami il tuo progetto: concordiamo un sopralluogo e valutiamo
+                insieme la soluzione per il tuo impianto.
+              </p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                { href: "/impianti-elettrici-zola-predosa", title: "Impianti a Zola Predosa", text: "Abitazioni, ristrutturazioni e attività locali." },
+                { href: "/elettricista-bologna", title: "Elettricista a Bologna", text: "Impianti elettrici per privati e aziende." },
+                { href: "/domotica-bologna", title: "Domotica a Bologna", text: "Luci, tapparelle e comfort da controllare insieme." },
+                { href: "/quadri-elettrici-industriali-bologna", title: "Quadri elettrici industriali", text: "Distribuzione e automazione per la tua azienda." },
+              ].map((item) => (
+                <Link key={item.href} href={item.href} className="group rounded-2xl border border-white/20 bg-white/5 p-5 transition-colors hover:border-brand-primary hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary">
+                  <ArrowUpRight aria-hidden="true" className="mb-4 h-5 w-5 text-brand-primary" />
+                  <h3 className="font-bold text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-neutral-300">{item.text}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
 
       {/* [3] Why choose PowerVolt */}
       <WhyUs variant="full" />

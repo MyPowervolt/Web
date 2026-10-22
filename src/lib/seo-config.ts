@@ -6,11 +6,11 @@
 export const SEO_CONFIG = {
   siteName: "PowerVolt",
   siteUrl: "https://powervolt.it",
-  defaultTitle: "PowerVolt | Impianti Elettrici Civili e Industriali",
+  defaultTitle: "Elettricista a Zola Predosa e Bologna | PowerVolt",
   titleTemplate: "%s | PowerVolt",
   defaultDescription:
-    "PowerVolt realizza impianti elettrici civili e industriali, automazioni, domotica, quadri elettrici e reti dati, nel rispetto delle normative CEI.",
-  defaultOgImage: "https://powervolt.it/og-default.jpg",
+    "Elettricista a Zola Predosa, Bologna e dintorni. Impianti civili e industriali, domotica e automazioni. Contatta PowerVolt per un sopralluogo.",
+  defaultOgImage: "https://powervolt.it/img/hero-technician.jpg",
   locale: "it_IT",
   language: "it",
   twitterHandle: "",

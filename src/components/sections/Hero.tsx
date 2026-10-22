@@ -206,14 +206,19 @@ export function Hero({
                       className="absolute -inset-8 rounded-full bg-brand-primary/10 blur-2xl"
                     />
                     {/* Circle portrait */}
-                    <div className="relative h-44 w-44 overflow-hidden rounded-full border-2 border-brand-primary/35 shadow-xl shadow-black/40 sm:h-52 sm:w-52 md:h-[270px] md:w-[270px] lg:h-[320px] lg:w-[320px]">
+                    <div className="relative h-64 w-60 overflow-hidden rounded-[2rem] border border-brand-primary/40 shadow-xl shadow-black/40 sm:h-80 sm:w-72 md:h-[380px] md:w-[320px] lg:h-[460px] lg:w-[380px]">
                       <Image
                         alt={founderImageAlt}
                         className="object-cover object-top"
                         fill
-                        sizes="(max-width: 640px) 176px, (max-width: 768px) 208px, (max-width: 1024px) 270px, 320px"
+                        sizes="(max-width: 640px) 240px, (max-width: 768px) 288px, (max-width: 1024px) 320px, 380px"
+                        priority
                         src={founderImageSrc}
                       />
+                    </div>
+                    <div className="relative mx-4 -mt-8 rounded-xl border border-white/15 bg-brand-secondary p-4 shadow-lg">
+                      <p className="text-sm font-bold text-white">Il tuo progetto, seguito di persona.</p>
+                      <p className="mt-1 text-xs text-neutral-300">Contatto diretto con il titolare di PowerVolt</p>
                     </div>
                   </div>
                 </div>
