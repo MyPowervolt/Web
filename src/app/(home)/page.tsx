@@ -11,7 +11,8 @@ import { Services } from "@/components/home/Services";
 import { Method } from "@/components/home/Method";
 import { About } from "@/components/home/About";
 import { QuoteForm } from "@/components/home/QuoteForm";
-import { Faq, FAQ_ITEMS } from "@/components/home/Faq";
+import { Faq } from "@/components/home/Faq";
+import { FAQ_ITEMS } from "@/components/home/faq-data";
 import { FinalCta } from "@/components/home/FinalCta";
 import { HomeFooter } from "@/components/home/Footer";
 
