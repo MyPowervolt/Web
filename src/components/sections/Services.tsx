@@ -8,6 +8,14 @@ import {
   Cpu,
   Shield,
   Network,
+  Sun,
+  Camera,
+  Building2,
+  Lightbulb,
+  Zap,
+  Bell,
+  Gamepad2,
+  KeyRound,
 } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -24,6 +32,14 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string; "aria-h
   Cpu,
   Shield,
   Network,
+  Sun,
+  Camera,
+  Building2,
+  Lightbulb,
+  Zap,
+  Bell,
+  Gamepad2,
+  KeyRound,
 };
 
 // ─── Service card ─────────────────────────────────────────────────────────────

@@ -1,4 +1,5 @@
 import type { Service } from "@/types";
+import { EXTRA_SERVICES } from "./services-extra";
 
 /**
  * Master list of PowerVolt services.
@@ -10,7 +11,7 @@ import type { Service } from "@/types";
  *
  * Order reflects SEO priority from REDESIGN_PLAN.md §5.
  */
-export const SERVICES: Service[] = [
+const BASE_SERVICES: Service[] = [
   {
     slug: "impianti-elettrici-civili",
     name: "Impianti Elettrici Civili",
@@ -305,6 +306,8 @@ export const SERVICES: Service[] = [
     target: "B2C+B2B",
   },
 ];
+
+export const SERVICES: Service[] = [...BASE_SERVICES, ...EXTRA_SERVICES];
 
 /** Lookup a service by its URL slug */
 export function getServiceBySlug(slug: string): Service | undefined {
