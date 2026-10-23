@@ -428,3 +428,9 @@ filter:drop-shadow(0 0 3px rgba(255,194,26,.95)) drop-shadow(0 0 10px rgba(255,1
 .pv .inner details>summary:hover{color:#FFC21A}
 .pv .inner a:not([class]){color:#FFC21A;text-decoration:underline}
 .pv .inner .font-extrabold{font-weight:600}
+
+/* Hero delle pagine interne: via sfondo viola, striscia e alone arancio del vecchio tema */
+.pv .inner section[aria-labelledby="hero-heading"]{background:#0B0D10 radial-gradient(900px 480px at 88% 0%,rgba(255,194,26,.09),rgba(255,194,26,0) 65%);border-bottom:1px solid #1D2127}
+.pv .inner section[aria-labelledby="hero-heading"]>[aria-hidden="true"]{display:none}
+.pv .inner section[aria-labelledby="hero-heading"] h1{color:#EDEAE4}
+.pv .inner section.bg-brand-secondary [class*="blur-"]{display:none}
