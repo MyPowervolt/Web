@@ -5,7 +5,7 @@ import { Fragment, useState } from "react";
 
 const TABS = [
   { id: "ind", label: "Industria e aziende" },
-  { id: "civ", label: "Case e abitazioni" },
+  { id: "civ", label: "Abitazioni" },
   { id: "bnb", label: "B&B e ospitalità" },
 ] as const;
 
