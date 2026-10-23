@@ -2,8 +2,7 @@ import Link from "next/link";
 import { Home, ArrowLeft, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+import { InnerShell } from "@/components/home/InnerShell";
 import { SITE_CONFIG } from "@/data/site-config";
 
 /**
@@ -13,8 +12,7 @@ import { SITE_CONFIG } from "@/data/site-config";
  */
 export default function NotFound() {
   return (
-    <>
-    <Header />
+    <InnerShell>
     <section className="flex flex-1 items-center py-24">
       <Container>
         <div className="mx-auto max-w-xl text-center">
@@ -82,7 +80,6 @@ export default function NotFound() {
         </div>
       </Container>
     </section>
-    <Footer />
-    </>
+    </InnerShell>
   );
 }

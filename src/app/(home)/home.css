@@ -397,3 +397,34 @@ filter:drop-shadow(0 0 3px rgba(255,194,26,.95)) drop-shadow(0 0 10px rgba(255,1
 .pv h1,.pv h2,.pv h3,.pv h4{color:#EDEAE4}
 /* Su touch non c'è hover: le illustrazioni delle schede restano visibili */
 @media (hover:none){.ico svg{opacity:1;transform:none}}
+
+/* ===== Pagine interne: stessa grafica scura della homepage ===== */
+.pv .inner{background:#0B0D10;color:#EDEAE4}
+.pv .inner h1,.pv .inner h2,.pv .inner h3,.pv .inner h4{font-family:var(--font-barlow-condensed),sans-serif;text-transform:uppercase;font-weight:600;letter-spacing:.01em;line-height:1.08}
+.pv .inner h1{font-size:clamp(2.4rem,5vw,4.2rem)}
+.pv .inner h2{font-size:clamp(1.9rem,3.4vw,2.9rem)}
+.pv .inner h3{font-size:clamp(1.4rem,2.2vw,1.9rem)}
+.pv .inner section.bg-white,.pv .inner section.bg-neutral-50{background:#0B0D10}
+.pv .inner section.bg-neutral-100{background:#0E1014;border-top:1px solid #1D2127;border-bottom:1px solid #1D2127}
+.pv .inner section.bg-brand-secondary{background:#0E1014;border-top:1px solid #1D2127;border-bottom:1px solid #1D2127}
+.pv .inner section.bg-brand-primary-light{background:#14110A}
+.pv .inner .bg-white,.pv .inner .bg-neutral-50,.pv .inner .bg-neutral-100{background:#12151A}
+.pv .inner .bg-brand-primary-light{background:#14110A}
+.pv .inner .bg-success-50{background:#10241A}
+.pv .inner .text-success-700{color:#6FE29A}
+.pv .inner .text-neutral-900,.pv .inner .text-neutral-800,.pv .inner .text-white{color:#EDEAE4}
+.pv .inner .text-neutral-700{color:#C9CDD2}
+.pv .inner .text-neutral-600,.pv .inner .text-neutral-500,.pv .inner .text-neutral-300,.pv .inner .text-white\/80{color:#B6BBC2}
+.pv .inner .text-neutral-400,.pv .inner .text-white\/60{color:#8A9099}
+.pv .inner .text-brand-primary{color:#FFC21A}
+.pv .inner .bg-brand-primary,.pv .inner .hover\:bg-brand-primary:hover{background:#FFC21A;color:#0B0D10}
+.pv .inner .bg-brand-primary:hover{background:#FFD65C}
+.pv .inner .text-brand-secondary{color:#0B0D10}
+.pv .inner .border-brand-primary{border-color:#FFC21A}
+.pv .inner .border-neutral-200,.pv .inner .border-neutral-100,.pv .inner .border-white\/15,.pv .inner .border-white\/10{border-color:#232930}
+.pv .inner .rounded-xl,.pv .inner .rounded-2xl,.pv .inner .rounded-lg{border-radius:2px}
+.pv .inner .shadow-sm,.pv .inner .shadow-md,.pv .inner .shadow-lg{box-shadow:none}
+.pv .inner details>summary{color:#EDEAE4}
+.pv .inner details>summary:hover{color:#FFC21A}
+.pv .inner a:not([class]){color:#FFC21A;text-decoration:underline}
+.pv .inner .font-extrabold{font-weight:600}

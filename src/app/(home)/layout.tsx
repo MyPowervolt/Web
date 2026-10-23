@@ -1,20 +1,6 @@
-import { Barlow, Barlow_Condensed } from "next/font/google";
 import { LightShell } from "@/components/home/LightShell";
+import { barlow, barlowCondensed } from "@/components/home/fonts";
 import "./home.css";
-
-const barlow = Barlow({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-  variable: "--font-barlow",
-});
-
-const barlowCondensed = Barlow_Condensed({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  display: "swap",
-  variable: "--font-barlow-condensed",
-});
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -9,6 +9,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { SITE_CONFIG } from "@/data/site-config";
+import { QuoteForm } from "@/components/home/QuoteForm";
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 
@@ -70,7 +71,7 @@ export default function ContattiPage() {
       </Section>
 
       {/* Main contact section */}
-      <Section aria-labelledby="contact-info-heading" id="sopralluogo" variant="light">
+      <Section aria-labelledby="contact-info-heading" variant="light">
         <Container>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {/* Left: Why contact us */}
@@ -217,6 +218,8 @@ export default function ContattiPage() {
           </div>
         </Container>
       </Section>
+
+      <QuoteForm />
     </>
   );
 }
