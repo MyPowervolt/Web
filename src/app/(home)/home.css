@@ -438,6 +438,6 @@ filter:drop-shadow(0 0 3px rgba(255,194,26,.95)) drop-shadow(0 0 10px rgba(255,1
 /* Schede servizi: sempre visibili, nessuna animazione al passaggio del mouse */
 .t3d,.t3d:hover{transform:none !important}
 .ico svg,.t3d:hover .ico svg{opacity:1 !important;transform:none !important}
-.ico *,.t3d:hover .ico *{animation-play-state:paused !important}
+.ico *,.t3d:hover .ico *{animation-play-state:running !important}
 .t3d:hover .stage::before,.t3d:hover .stage::after{animation:none !important}
 .t3d:hover>.storm{opacity:0 !important;animation:none !important}
